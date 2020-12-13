@@ -1,19 +1,5 @@
 @charset "utf-8";
-$boxwidth:1200px;
-$r:right;
-$l:left;
-@mixin borderstyle ($w:1px, $c:#ccc, $s:solid) {
-    border: $w $c $s;
-}
-
-@mixin borius ($br:20px) {
-    border-radius: $br;
-    -webkit-border-radius: $br;
-    -o-border-radius: $br;
-    -ms-border-radius: $br;
-    -moz-border-radius: $br;
-}
-
+@import"txt";
 .box-con {
     width: $boxwidth;
     margin: 0 auto;

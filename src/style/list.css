@@ -312,280 +312,24 @@ footer {
       .app-r div span p {
         color: #aaa; }
 
-body {
-  position: relative; }
-
-.body {
+.vip-top {
   width: 100%;
-  background: #f5f5f5;
-  padding-bottom: 50px; }
+  height: 50px;
+  top: 0;
+  text-align: center;
+  line-height: 50px;
+  background: #fff; }
+  .vip-top a {
+    color: #000;
+    margin: 0 10px; }
+    .vip-top a:hover {
+      color: #f22; }
 
-.banner {
-  height: 380px;
-  position: relative; }
-
-/*轮播图 */
-.banner-list {
-  width: 100%;
-  position: relative; }
-  .banner-list li {
-    width: 700px;
-    height: 360px;
-    position: absolute;
-    left: 220px;
-    top: 20px;
-    z-index: 0;
-    opacity: 0; }
-  .banner-list .ban-active {
-    z-index: 1;
-    opacity: 1; }
-  .banner-list .r-1 {
-    background: url(https://goods5.juancdn.com/bao/201208/9/e/5fcf36aa09ef0f79db7f8263_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat; }
-  .banner-list .r-2 {
-    background: url(https://goods7.juancdn.com/bao/201208/d/c/5fcf35d33f908243cb6a6059_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat; }
-  .banner-list .r-3 {
-    background: url(https://goods4.juancdn.com/bao/201208/7/d/5fcf35bb569ede7e6c395c54_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat; }
-
-/*轮播图左 */
-.banner-l {
-  background: #fff;
-  position: absolute; }
-  .banner-l .show-l {
-    width: 210px;
-    height: 380px;
-    box-sizing: border-box;
-    padding: 2px 10px 10px; }
-    .banner-l .show-l li {
-      width: 190px;
-      height: 54px;
-      padding: 1px;
-      box-sizing: border-box;
-      border-bottom: 1px double #ccc;
-      position: relative; }
-      .banner-l .show-l li a {
-        float: left;
-        color: #555;
-        width: 94px;
-        height: 50px;
-        line-height: 54px;
-        text-align: center;
-        position: relative; }
-        .banner-l .show-l li a:hover {
-          color: #f22; }
-          .banner-l .show-l li a:hover i {
-            background-position-y: -24px; }
-        .banner-l .show-l li a i {
-          position: absolute;
-          top: 15px;
-          left: 5px;
-          width: 24px;
-          height: 24px;
-          display: inline-block;
-          background: url(http://jp.juancdn.com/juanpi/images/global/ct_icons.png?20160112) no-repeat; }
-        .banner-l .show-l li a .i-1 {
-          background-position-x: 0px; }
-        .banner-l .show-l li a .i-2 {
-          background-position-x: -24px; }
-        .banner-l .show-l li a .i-3 {
-          background-position-x: -48px; }
-        .banner-l .show-l li a .i-4 {
-          background-position-x: -72px; }
-        .banner-l .show-l li a .i-5 {
-          background-position-x: -96px; }
-        .banner-l .show-l li a .i-6 {
-          background-position-x: -120px; }
-        .banner-l .show-l li a .i-7 {
-          background-position-x: -144px; }
-        .banner-l .show-l li a .i-8 {
-          background-position-x: -168px; }
-        .banner-l .show-l li a .i-9 {
-          background-position-x: -192px; }
-        .banner-l .show-l li a .i-10 {
-          background-position-x: -216px; }
-        .banner-l .show-l li a .i-11 {
-          background-position-x: -240px; }
-        .banner-l .show-l li a .i-12 {
-          background-position-x: -264px; }
-        .banner-l .show-l li a .i-13 {
-          background-position-x: -288px; }
-        .banner-l .show-l li a .i-14 {
-          background-position-x: -312px; }
-      .banner-l .show-l li span {
-        position: absolute;
-        left: 90px;
-        top: 20px;
-        width: 0px;
-        display: inline-block;
-        height: 25px;
-        border-right: 1px double #ccc; }
-
-/*轮播图  右*/
-.banner-r {
-  position: absolute;
-  right: 0;
-  top: 20px; }
-  .banner-r .show-r {
-    width: 251px;
-    height: 360px; }
-    .banner-r .show-r li {
-      width: 250px;
-      height: 120px; }
-      .banner-r .show-r li a {
-        float: left;
-        width: 125px;
-        height: 120px;
-        display: block;
-        box-sizing: border-box;
-        border-bottom: 1px solid #ccc;
-        border-right: 1px solid #ccc; }
-      .banner-r .show-r li i {
-        display: inline-block;
-        width: 124px;
-        height: 119px; }
-      .banner-r .show-r li span {
-        display: inline-block;
-        width: 250px;
-        height: 120px; }
-
-.show-r1 {
-  background: url(http://s.juancdn.com/juanpi/images/banners/r-1.jpg) no-repeat; }
-
-.show-r2 {
-  background: url(http://s.juancdn.com/juanpi/images/banners/r-2.jpg) no-repeat; }
-
-.show-r3 {
-  background: url(http://s.juancdn.com/juanpi/images/banners/r-3.jpg) no-repeat; }
-
-.show-r4 {
-  background: url(http://s.juancdn.com/juanpi/images/banners/r-4.jpg) no-repeat; }
-
-.show-r5 {
-  background: url(http://s.juancdn.com/juanpi/images/banners/r-5.jpg) no-repeat; }
-
-/*轮播图  左右键  需要js写hover效果*/
-.banner-lr {
-  position: absolute;
-  top: 170px;
-  left: 220px;
-  z-index: 15; }
-  .banner-lr span {
-    position: absolute;
-    display: block;
-    width: 30px;
-    height: 40px;
-    background: rgba(85, 85, 85, 0.8);
-    padding: 8px 7px;
-    box-sizing: border-box; }
-    .banner-lr span i {
-      display: block;
-      width: 16px;
-      height: 24px;
-      background: url(http://jp.juancdn.com/juanpi/images/global/arrow.png) no-repeat; }
-    .banner-lr span .lrr {
-      background-position-x: -16px; }
-
-.lr-right {
-  right: -700px; }
-
-/*轮播图小圆点*/
-.banner-key {
-  position: absolute;
-  top: 350px;
-  width: 60px;
-  height: 30px;
-  left: 500px;
-  z-index: 15; }
-
-.banner-lk li {
-  float: left;
-  width: 5px;
-  height: 5px;
-  margin: 0 5px;
-  background: #fff;
-  border: 2px solid rgba(85, 85, 85, 0);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -moz-border-radius: 50%; }
-.banner-lk .lk-a {
-  border: 2px solid #fff;
-  background: rgba(85, 85, 85, 0); }
-
-/*今日品牌*/
-.brand {
-  margin-top: 30px;
-  background: #fff;
-  padding: 20px;
-  box-sizing: border-box; }
-
-.h5 {
-  line-height: 30px;
-  font-size: 20px;
-  font-weight: 900;
-  vertical-align: bottom; }
-  .h5 span {
-    font-size: 14px;
-    font-weight: normal;
-    color: #ccc; }
-
-.brand-show {
-  display: flex; }
-  .brand-show li {
-    width: 278px;
-    height: 170px;
-    margin: auto;
-    position: relative; }
-    .brand-show li img {
-      width: 100%;
-      border: 1px #ccc solid;
-      box-sizing: border-box; }
-    .brand-show li div {
-      width: 278px;
-      height: 20px;
-      position: absolute;
-      background: rgba(150, 150, 150, 0.8);
-      top: 96px;
-      font-size: 12px;
-      color: #fff; }
-      .brand-show li div span {
-        display: inline-block;
-        margin: 0px 20px 0px 60px;
-        width: 14px;
-        height: 15px;
-        background: url(http://jp.juancdn.com/juanpi/images/icon/clock.png) no-repeat;
-        background-position-y: 1px;
-        vertical-align: middle; }
-    .brand-show li p {
-      margin-top: 20px;
-      line-height: 40px;
-      cursor: pointer; }
-    .brand-show li a {
-      width: 68px;
-      height: 26px;
-      display: block;
-      position: absolute;
-      bottom: 5px;
-      color: #f11;
-      right: 20px;
-      line-height: 26px;
-      text-align: center;
-      border-radius: 3px;
-      -webkit-border-radius: 3px;
-      -o-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -moz-border-radius: 3px; }
-      .brand-show li a:hover {
-        background: #f11;
-        color: #fff; }
-
-/*今日新品*/
 .new-v {
   background: #fff;
-  margin-top: 30px;
   background: #fff;
   box-sizing: border-box;
-  padding: 20px 0; }
+  padding-bottom: 20px; }
   .new-v .h5 {
     padding: 2px 16px 0; }
 
@@ -656,23 +400,6 @@ body {
     .pg a:hover {
       color: #f22; }
 
-/*窗口定位部分*/
-.vip-top {
-  display: none;
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  top: 0;
-  text-align: center;
-  line-height: 50px;
-  background: #fff;
-  z-index: 88; }
-  .vip-top a {
-    color: #000;
-    margin: 0 10px; }
-    .vip-top a:hover {
-      color: #f22; }
-
 .vip-right {
   height: 100%;
   position: fixed;
@@ -714,4 +441,4 @@ body {
         height: 78px;
         background-position-y: -24px; }
 
-/*# sourceMappingURL=index_1.css.map */
+/*# sourceMappingURL=list.css.map */

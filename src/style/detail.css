@@ -1,0 +1,391 @@
+@charset "UTF-8";
+html,
+body,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 14px;
+  font-family: '微软雅黑'; }
+
+ul,
+ol,
+li {
+  list-style: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 16px;
+  font-weight: normal; }
+
+b,
+strong {
+  font-weight: normal; }
+
+i,
+em {
+  font-style: normal; }
+
+a,
+u {
+  text-decoration: none; }
+
+img {
+  border: 0;
+  display: block; }
+
+input,
+fieldset {
+  outline: none;
+  border: 0; }
+
+.clear_fix:after {
+  content: '.';
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  visibility: hidden; }
+
+.clear_fix {
+  zoom: 1; }
+
+div {
+  box-sizing: border-box; }
+
+.box-con {
+  width: 1200px;
+  margin: 0 auto; }
+
+nav {
+  border-bottom: 2px solid #f44; }
+
+.nav-top {
+  width: 100%;
+  background: #f6f6f6; }
+  .nav-top .nav-con .top-right {
+    width: 40%;
+    float: right; }
+
+.login-show,
+.my-show,
+.bag-show,
+.other-show {
+  width: 25%;
+  float: left;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center; }
+  .login-show a,
+  .my-show a,
+  .bag-show a,
+  .other-show a {
+    color: #000;
+    margin: 0 3px; }
+
+.login-show a:hover,
+.my-show a:hover,
+.other-show a:hover {
+  color: #f11; }
+
+.login-show :nth-child(2) {
+  color: #f11; }
+
+.bag-show {
+  position: relative; }
+  .bag-show span {
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 18px;
+    width: 16px;
+    height: 18px;
+    background: url(https://jp.juancdn.com/juanpi/images/total/icon-total.png?20160112) 0px 244px; }
+  .bag-show a {
+    display: block;
+    width: 90%;
+    height: 30px; }
+
+.bag-show:hover {
+  background: #fff;
+  box-shadow: 1px 1px 3px #fff; }
+
+.my-show {
+  position: relative; }
+  .my-show span {
+    position: absolute;
+    left: -10px;
+    color: #ccc; }
+
+.other-show {
+  position: relative; }
+  .other-show span {
+    position: absolute;
+    left: 0;
+    color: #ddd; }
+
+.login-show {
+  position: relative; }
+  .login-show .logined-show {
+    position: absolute;
+    top: 20;
+    right: 20px;
+    display: none; }
+
+.other-show {
+  position: relative; }
+  .other-show .nor-ul {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    background: #fff;
+    display: none;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    z-index: 10; }
+
+.other-show:hover .nor-ul {
+  display: block; }
+
+/*导航logo部分*/
+.nav-cen {
+  position: relative; }
+
+.logo {
+  margin: 17px 0;
+  width: 210px;
+  height: 52px;
+  background: url(http://jp.juancdn.com/juanpi/images/total/header-total.gif?20160112) no-repeat;
+  background-position: -78px -52px; }
+
+.logo-con {
+  position: absolute;
+  left: 500px;
+  top: 10px;
+  width: 465px;
+  height: 33px;
+  background: url(http://jp.juancdn.com/juanpi/images/total/header-total.gif?20160112) no-repeat; }
+  .logo-con a {
+    display: inline-block;
+    width: 98px;
+    height: 16px;
+    margin: 0 20px; }
+
+.sosu {
+  width: 200px;
+  height: 35px;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  border: 1px #ccc solid; }
+  .sosu input {
+    width: 163px;
+    height: 33px;
+    color: #000;
+    background: #ddd; }
+  .sosu span {
+    position: absolute;
+    top: -1px;
+    display: inline-block;
+    width: 37px;
+    height: 34px;
+    background: url(http://jp.juancdn.com/juanpi/images/total/header-total.gif?20160112) no-repeat;
+    background-position: right -65px; }
+
+.nav-bot ul li {
+  padding: 5px 24px 0px;
+  float: left; }
+  .nav-bot ul li a {
+    color: #000;
+    line-height: 30px; }
+  .nav-bot ul li a:hover {
+    color: #f22; }
+.nav-bot ul .nav-active {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #f44; }
+  .nav-bot ul .nav-active a {
+    color: #fff; }
+  .nav-bot ul .nav-active a:hover {
+    color: #fff; }
+
+footer {
+  height: 300px;
+  border-top: 3px solid #f44;
+  background: #f3f3f3; }
+
+.foot-con {
+  padding: 0px 50px 30px; }
+  .foot-con .foot-t {
+    width: 1100px;
+    height: 161px;
+    padding: 25px 0 0;
+    position: relative; }
+    .foot-con .foot-t > p {
+      font-size: 9px;
+      color: #999;
+      text-align: center; }
+    .foot-con .foot-t .p-t {
+      padding: 20px 0 0;
+      border-top: 1px dashed #999; }
+    .foot-con .foot-t .foot-b {
+      padding: 10px 0 0;
+      text-align: center; }
+      .foot-con .foot-t .foot-b img {
+        display: inline-block; }
+
+.app-l {
+  display: inline-block;
+  margin: 5px 0 0; }
+  .app-l > p {
+    margin: 10px 0; }
+
+.foot-t-con {
+  display: inline-block;
+  padding-left: 65px;
+  line-height: 25px; }
+  .foot-t-con ul {
+    float: left;
+    margin-right: 100px; }
+    .foot-t-con ul > p {
+      font-size: 16px; }
+    .foot-t-con ul > li {
+      color: #999;
+      font-size: 12px;
+      list-style: disc;
+      list-style-position: inside;
+      cursor: pointer; }
+
+.app-r {
+  display: inline-block;
+  font-size: 9px;
+  top: 60px;
+  right: 50px; }
+  .app-r > p {
+    margin-top: 20px;
+    color: #666; }
+  .app-r div {
+    position: relative; }
+    .app-r div i {
+      width: 90px;
+      height: 40px;
+      display: inline-block;
+      background: url(http://jp.juancdn.com/juanpi/images/global/service_add.gif?20160113) no-repeat;
+      margin-right: 5px; }
+    .app-r div i:hover {
+      background-position: 0 -47px; }
+    .app-r div span {
+      width: 90px;
+      height: 40px;
+      position: absolute;
+      top: 7px;
+      display: inline-block; }
+      .app-r div span p {
+        color: #aaa; }
+
+.render {
+  width: 1200px;
+  height: 420px;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .render .red-list {
+    margin: auto 10px;
+    width: 100px;
+    height: 400px;
+    box-sizing: border-box; }
+    .render .red-list li {
+      margin-top: 8px; }
+      .render .red-list li img {
+        margin: 0 auto; }
+  .render .red-viw {
+    margin: auto 15px;
+    width: 35%;
+    height: 400px;
+    box-sizing: border-box; }
+  .render .red-car {
+    margin: auto 20px;
+    width: 40%;
+    height: 400px;
+    box-sizing: border-box; }
+
+.red-car {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px; }
+  .red-car > p {
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 900;
+    margin-bottom: 10px; }
+    .red-car > p:nth-of-type(2) {
+      color: #f22;
+      font-size: 20px;
+      background: rgba(255, 150, 150, 0.5); }
+  .red-car > div {
+    margin-top: 30px;
+    position: relative; }
+    .red-car > div span {
+      display: inline-block;
+      height: 40px;
+      font-size: 30px;
+      line-height: 40px;
+      margin-top: -10px;
+      vertical-align: middle; }
+    .red-car > div input {
+      width: 40px;
+      height: 25px;
+      text-align: center;
+      margin: 0 10px;
+      border: 1px #ccc solid;
+      vertical-align: middle; }
+    .red-car > div a {
+      display: block;
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+      color: #fff;
+      border: 1px #ccc solid;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -o-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -moz-border-radius: 20px;
+      background: #f22;
+      text-align: center; }
+
+/*# sourceMappingURL=detail.css.map */

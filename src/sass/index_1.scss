@@ -1,324 +1,442 @@
-@charset "utf-8";
-@import "reset";
-@import"nav";
-@import"footer";
-$boxwidth:1200px;
-$r:right;
-$l:left;
-$bx:-24px;
-@mixin borderstyle ($w:1px, $c:#ccc, $s:solid) {
-    border: $w $c $s;
-}
-
-@mixin borius ($br:20px) {
-    border-radius: $br;
-    -webkit-border-radius: $br;
-    -o-border-radius: $br;
-    -ms-border-radius: $br;
-    -moz-border-radius: $br;
-}
-
-@mixin posr() {
-    position: relative;
-}
-
-@mixin posa() {
-    position: absolute;
-}
-
-@mixin bgc($c:#fff) {
-    background: $c;
-}
-
-.body {
-    width: 100%;
-    @include bgc(#f5f5f5);
-}
-
-.banner {
-    height: 380px;
-    @include posr();
-}
-
-
-/*轮播图 */
-
-.banner-list {
-    width: 100%;
-    @include posr();
-    li {
-        width: 700px;
-        height: 360px;
-        @include posa();
-        left: 220px;
-        top: 20px;
-        z-index: 0;
-        opacity: 0;
+    @charset "utf-8";
+    @import"txt";
+    @import "reset";
+    @import"nav";
+    @import"footer";
+    body {
+        @include posr();
     }
-    .ban-active {
-        z-index: 1;
-        opacity: 1;
+    
+    .body {
+        width: 100%;
+        @include bgc(#f5f5f5);
+        padding-bottom: 50px;
     }
-    .r-1 {
-        background: url(https://goods5.juancdn.com/bao/201208/9/e/5fcf36aa09ef0f79db7f8263_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat;
-    }
-    .r-2 {
-        background: url(https://goods7.juancdn.com/bao/201208/d/c/5fcf35d33f908243cb6a6059_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat;
-    }
-    .r-3 {
-        background: url(https://goods4.juancdn.com/bao/201208/7/d/5fcf35bb569ede7e6c395c54_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat;
-    }
-}
-
-
-/*轮播图左 */
-
-.banner-l {
-    @include bgc();
-    @include posa();
-    .show-l {
-        width: 210px;
+    
+    .banner {
         height: 380px;
-        box-sizing: border-box;
-        padding: 2px 10px 10px;
+        @include posr();
+    }
+    /*轮播图 */
+    
+    .banner-list {
+        width: 100%;
+        @include posr();
         li {
-            width: 190px;
-            height: 54px;
-            padding: 1px;
+            width: 700px;
+            height: 360px;
+            @include posa();
+            left: 220px;
+            top: 20px;
+            z-index: 0;
+            opacity: 0;
+        }
+        .ban-active {
+            z-index: 1;
+            opacity: 1;
+        }
+        .r-1 {
+            background: url(https://goods5.juancdn.com/bao/201208/9/e/5fcf36aa09ef0f79db7f8263_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat;
+        }
+        .r-2 {
+            background: url(https://goods7.juancdn.com/bao/201208/d/c/5fcf35d33f908243cb6a6059_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat;
+        }
+        .r-3 {
+            background: url(https://goods4.juancdn.com/bao/201208/7/d/5fcf35bb569ede7e6c395c54_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat;
+        }
+    }
+    /*轮播图左 */
+    
+    .banner-l {
+        @include bgc();
+        @include posa();
+        .show-l {
+            width: 210px;
+            height: 380px;
             box-sizing: border-box;
-            border-bottom: 1px double #ccc;
-            @include posr();
-            a {
-                float: left;
-                color: #555;
-                width: 94px;
-                height: 50px;
-                line-height: 54px;
-                text-align: center;
+            padding: 2px 10px 10px;
+            li {
+                width: 190px;
+                height: 54px;
+                padding: 1px;
+                box-sizing: border-box;
+                border-bottom: 1px double #ccc;
                 @include posr();
-                &:hover {
-                    color: #f22;
+                a {
+                    float: left;
+                    color: #555;
+                    width: 94px;
+                    height: 50px;
+                    line-height: 54px;
+                    text-align: center;
+                    @include posr();
+                    &:hover {
+                        color: #f22;
+                        i {
+                            background-position-y: -24px;
+                        }
+                    }
                     i {
-                        background-position-y: -24px;
+                        @include posa();
+                        top: 15px;
+                        left: 5px;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        background: url(http://jp.juancdn.com/juanpi/images/global/ct_icons.png?20160112) no-repeat;
+                    }
+                    @for $i from 1 through 14 {
+                        .i-#{$i} {
+                            background-position-x: ($bx*$i)+24px;
+                        }
                     }
                 }
-                i {
+                span {
                     @include posa();
-                    top: 15px;
-                    left: 5px;
-                    width: 24px;
-                    height: 24px;
+                    left: 90px;
+                    top: 20px;
+                    width: 0px;
                     display: inline-block;
-                    background: url(http://jp.juancdn.com/juanpi/images/global/ct_icons.png?20160112) no-repeat;
+                    height: 25px;
+                    border-right: 1px double #ccc;
                 }
-                @for $i from 1 through 14 {
-                    .i-#{$i} {
-                        background-position-x: ($bx*$i)+24px;
-                    }
-                }
-            }
-            span {
-                @include posa();
-                left: 90px;
-                top: 20px;
-                width: 0px;
-                display: inline-block;
-                height: 25px;
-                border-right: 1px double #ccc;
             }
         }
     }
-}
-
-
-/*轮播图  右*/
-
-.banner-r {
-    @include posa();
-    right: 0;
-    top: 20px;
-    .show-r {
-        width: 251px;
-        height: 360px;
-        li {
-            width: 250px;
-            height: 120px;
-            a {
-                float: $l;
-                width: 125px;
-                height: 120px;
-                display: block;
-                box-sizing: border-box;
-                border-bottom: 1px solid #ccc;
-                border-right: 1px solid #ccc;
-            }
-            i {
-                display: inline-block;
-                width: 124px;
-                height: 119px;
-            }
-            span {
-                display: inline-block;
+    /*轮播图  右*/
+    
+    .banner-r {
+        @include posa();
+        right: 0;
+        top: 20px;
+        .show-r {
+            width: 251px;
+            height: 360px;
+            li {
                 width: 250px;
                 height: 120px;
+                a {
+                    float: $l;
+                    width: 125px;
+                    height: 120px;
+                    display: block;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                }
+                i {
+                    display: inline-block;
+                    width: 124px;
+                    height: 119px;
+                }
+                span {
+                    display: inline-block;
+                    width: 250px;
+                    height: 120px;
+                }
             }
         }
     }
-}
-
-.show-r1 {
-    background: url(http://s.juancdn.com/juanpi/images/banners/r-1.jpg) no-repeat;
-}
-
-.show-r2 {
-    background: url(http://s.juancdn.com/juanpi/images/banners/r-2.jpg) no-repeat;
-}
-
-.show-r3 {
-    background: url(http://s.juancdn.com/juanpi/images/banners/r-3.jpg) no-repeat;
-}
-
-.show-r4 {
-    background: url(http://s.juancdn.com/juanpi/images/banners/r-4.jpg) no-repeat;
-}
-
-.show-r5 {
-    background: url(http://s.juancdn.com/juanpi/images/banners/r-5.jpg) no-repeat;
-}
-
-
-/*轮播图  左右键  需要js写hover效果*/
-
-.banner-lr {
-    @include posa();
-    top: 170px;
-    left: 220px;
-    z-index: 15;
-    // display: none;
-    span {
+    
+    .show-r1 {
+        background: url(http://s.juancdn.com/juanpi/images/banners/r-1.jpg) no-repeat;
+    }
+    
+    .show-r2 {
+        background: url(http://s.juancdn.com/juanpi/images/banners/r-2.jpg) no-repeat;
+    }
+    
+    .show-r3 {
+        background: url(http://s.juancdn.com/juanpi/images/banners/r-3.jpg) no-repeat;
+    }
+    
+    .show-r4 {
+        background: url(http://s.juancdn.com/juanpi/images/banners/r-4.jpg) no-repeat;
+    }
+    
+    .show-r5 {
+        background: url(http://s.juancdn.com/juanpi/images/banners/r-5.jpg) no-repeat;
+    }
+    /*轮播图  左右键  需要js写hover效果*/
+    
+    .banner-lr {
         @include posa();
-        display: block;
-        width: 30px;
-        height: 40px;
-        background: rgba($color: #555, $alpha: 0.8);
-        padding: 8px 7px;
-        box-sizing: border-box;
-        i {
+        top: 170px;
+        left: 220px;
+        z-index: 15;
+        // display: none;
+        span {
+            @include posa();
             display: block;
-            width: 16px;
-            height: 24px;
-            background: url(http://jp.juancdn.com/juanpi/images/global/arrow.png) no-repeat;
-        }
-        .lrr {
-            background-position-x: -16px;
-        }
-    }
-}
-
-.lr-right {
-    right: -700px;
-}
-
-
-/*轮播图小圆点*/
-
-.banner-key {
-    @include posa();
-    top: 350px;
-    width: 60px;
-    height: 30px;
-    left: 500px;
-    z-index: 15;
-}
-
-.banner-lk {
-    li {
-        float: $l;
-        width: 5px;
-        height: 5px;
-        margin: 0 5px;
-        background: #fff;
-        @include borderstyle(2px, solid, rgba($color: #555, $alpha: 0));
-        @include borius(50%)
-    }
-    .lk-a {
-        @include borderstyle(2px, solid, #fff);
-        background: rgba($color: #555, $alpha: 0);
-    }
-}
-
-
-/*今日品牌*/
-
-.brand {
-    margin-top: 30px;
-    @include bgc();
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.h5 {
-    line-height: 30px;
-    font-size: 20px;
-    font-weight: 900;
-    vertical-align: bottom;
-    span {
-        font-size: 14px;
-        font-weight: normal;
-        color: #ccc;
-    }
-}
-
-.brand-show {
-    display: flex;
-    li {
-        width: 278px;
-        height: 170px;
-        margin: auto;
-        @include posr();
-        img {
-            width: 100%;
-            @include borderstyle();
+            width: 30px;
+            height: 40px;
+            background: rgba($color: #555, $alpha: 0.8);
+            padding: 8px 7px;
             box-sizing: border-box;
-        }
-        div {
-            width: 278px;
-            height: 20px;
-            @include posa();
-            background: rgba(150, 150, 150, 0.8);
-            top: 96px;
-            font-size: 12px;
-            color: #fff;
-            span {
-                display: inline-block;
-                margin: 0px 20px 0px 60px;
-                width: 14px;
-                height: 15px;
-                background: url(http://jp.juancdn.com/juanpi/images/icon/clock.png) no-repeat;
-                background-position-y: 1px;
-                vertical-align: middle;
+            i {
+                display: block;
+                width: 16px;
+                height: 24px;
+                background: url(http://jp.juancdn.com/juanpi/images/global/arrow.png) no-repeat;
             }
-        }
-        p {
-            margin-top: 20px;
-            line-height: 40px;
-            cursor: pointer;
-        }
-        a {
-            width: 68px;
-            height: 26px;
-            display: block;
-            @include posa();
-            bottom: 5px;
-            color: #f11;
-            right: 20px;
-            line-height: 26px;
-            text-align: center;
-            @include borius(3px);
-            &:hover {
-                @include bgc(#f11);
-                color: #fff;
+            .lrr {
+                background-position-x: -16px;
             }
         }
     }
-}
+    
+    .lr-right {
+        right: -700px;
+    }
+    /*轮播图小圆点*/
+    
+    .banner-key {
+        @include posa();
+        top: 350px;
+        width: 60px;
+        height: 30px;
+        left: 500px;
+        z-index: 15;
+    }
+    
+    .banner-lk {
+        li {
+            float: $l;
+            width: 5px;
+            height: 5px;
+            margin: 0 5px;
+            background: #fff;
+            @include borderstyle(2px, solid, rgba($color: #555, $alpha: 0));
+            @include borius(50%)
+        }
+        .lk-a {
+            @include borderstyle(2px, solid, #fff);
+            background: rgba($color: #555, $alpha: 0);
+        }
+    }
+    /*今日品牌*/
+    
+    .brand {
+        margin-top: 30px;
+        @include bgc();
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .h5 {
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: 900;
+        vertical-align: bottom;
+        span {
+            font-size: 14px;
+            font-weight: normal;
+            color: #ccc;
+        }
+    }
+    
+    .brand-show {
+        display: flex;
+        li {
+            width: 278px;
+            height: 170px;
+            margin: auto;
+            @include posr();
+            img {
+                width: 100%;
+                @include borderstyle();
+                box-sizing: border-box;
+            }
+            div {
+                width: 278px;
+                height: 20px;
+                @include posa();
+                background: rgba(150, 150, 150, 0.8);
+                top: 96px;
+                font-size: 12px;
+                color: #fff;
+                span {
+                    display: inline-block;
+                    margin: 0px 20px 0px 60px;
+                    width: 14px;
+                    height: 15px;
+                    background: url(http://jp.juancdn.com/juanpi/images/icon/clock.png) no-repeat;
+                    background-position-y: 1px;
+                    vertical-align: middle;
+                }
+            }
+            p {
+                margin-top: 20px;
+                line-height: 40px;
+                cursor: pointer;
+            }
+            a {
+                width: 68px;
+                height: 26px;
+                display: block;
+                @include posa();
+                bottom: 5px;
+                color: #f11;
+                right: 20px;
+                line-height: 26px;
+                text-align: center;
+                @include borius(3px);
+                &:hover {
+                    @include bgc(#f11);
+                    color: #fff;
+                }
+            }
+        }
+    }
+    /*今日新品*/
+    
+    .new-v {
+        background: #fff;
+        margin-top: 30px;
+        @include bgc(#fff);
+        box-sizing: border-box;
+        padding: 20px 0;
+        .h5 {
+            padding: 2px 16px 0;
+        }
+    }
+    
+    .new-pic {
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 0 0 14px;
+        li {
+            width: 230px;
+            height: 290px;
+            overflow: hidden;
+            margin: 0 6px 12px 0;
+            padding: 6px 5px 0px 3px;
+            border: 1px solid transparent;
+            box-sizing: border-box;
+            @include posr();
+            &:hover {
+                border-color: #ccc;
+            }
+            span {
+                display: block;
+                line-height: 30px;
+                font-size: 18px;
+                color: #f22;
+            }
+            p {
+                line-height: 25px;
+                font-size: 12px;
+            }
+            .my-like {
+                @include posa();
+                width: 28px;
+                height: 28px;
+                top: 20px;
+                right: 10px;
+                padding: 9px 7px;
+                box-sizing: border-box;
+                @include bgc(#ccc);
+                @include borius(50%);
+                u {
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+                    background: url(http://jp.juancdn.com/juanpi/images/list/my-like.png) no-repeat;
+                }
+                .active {
+                    background-position-y: -20px;
+                }
+            }
+        }
+    }
+    
+    .pg {
+        width: 100%;
+        text-align: center;
+        a {
+            display: inline-block;
+            font-size: 16px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            color: #666;
+            font-weight: 900;
+            &:nth-child(1) {
+                border-top-left-radius: 16px 16px;
+                border-bottom-left-radius: 16px 16px;
+            }
+            &:nth-last-child(1) {
+                border-top-right-radius: 16px 16px;
+                border-bottom-right-radius: 16px 16px;
+            }
+            &:hover {
+                color: #f22;
+            }
+        }
+    }
+    /*窗口定位部分*/
+    
+    .vip-top {
+        display: none;
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        text-align: center;
+        line-height: 50px;
+        @include bgc();
+        z-index: 88;
+        a {
+            color: #000;
+            margin: 0 10px;
+            &:hover {
+                color: #f22;
+            }
+        }
+    }
+    
+    .vip-right {
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        @include bgc(#333);
+        ul {
+            margin-top: 100px;
+            width: 36px;
+            li {
+                width: 36px;
+                height: 36px;
+                box-sizing: border-box;
+                padding: 6px 8px;
+                margin-bottom: 10px;
+                i {
+                    display: block;
+                    width: 20px;
+                    height: 24px;
+                    background: url(http://jp.juancdn.com/juanpi/images/global/sidebar.png) no-repeat;
+                }
+                @for $v from 3 through 7 {
+                    .v-#{$v} {
+                        background-position-y: ($bv*$v)-26px;
+                    }
+                }
+                &:hover {
+                    background: #f22;
+                    i {
+                        background-position-x: $bv;
+                    }
+                }
+            }
+            .v2 {
+                height: 120px;
+                padding: 21px 8px;
+                .v-2 {
+                    height: 78px;
+                    background-position-y: $bv+2px;
+                }
+            }
+        }
+    }

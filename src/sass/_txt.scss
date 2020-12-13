@@ -1,0 +1,29 @@
+@charset "utf-8";
+$boxwidth:1200px;
+$r:right;
+$l:left;
+$bx:-24px;
+$bv:-26px;
+@mixin borderstyle ($w:1px, $c:#ccc, $s:solid) {
+    border: $w $c $s;
+}
+
+@mixin borius ($br:20px) {
+    border-radius: $br;
+    -webkit-border-radius: $br;
+    -o-border-radius: $br;
+    -ms-border-radius: $br;
+    -moz-border-radius: $br;
+}
+
+@mixin posr() {
+    position: relative;
+}
+
+@mixin posa() {
+    position: absolute;
+}
+
+@mixin bgc($c:#fff) {
+    background: $c;
+}
