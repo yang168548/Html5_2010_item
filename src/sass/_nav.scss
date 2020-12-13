@@ -1,0 +1,213 @@
+@charset "utf-8";
+$boxwidth:1200px;
+$r:right;
+$l:left;
+@mixin borderstyle ($w:1px, $c:#ccc, $s:solid) {
+    border: $w $c $s;
+}
+
+@mixin borius ($br:20px) {
+    border-radius: $br;
+    -webkit-border-radius: $br;
+    -o-border-radius: $br;
+    -ms-border-radius: $br;
+    -moz-border-radius: $br;
+}
+
+.box-con {
+    width: $boxwidth;
+    margin: 0 auto;
+}
+
+nav {
+    border-bottom: 2px solid #f44;
+}
+
+.nav-top {
+    width: 100%;
+    background: #f6f6f6;
+    .nav-con {
+        .top-right {
+            width: 40%;
+            float: $r;
+        }
+    }
+}
+
+.login-show,
+.my-show,
+.bag-show,
+.other-show {
+    width: 25%;
+    float: $l;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    a {
+        color: #000;
+        margin: 0 3px;
+    }
+}
+
+.login-show,
+.my-show,
+.other-show {
+    a:hover {
+        color: #f11;
+    }
+}
+
+.login-show :nth-child(2) {
+    color: #f11;
+}
+
+.bag-show {
+    position: relative;
+    span {
+        position: absolute;
+        display: block;
+        top: 6px;
+        left: 18px;
+        width: 16px;
+        height: 18px;
+        background: url(https://jp.juancdn.com/juanpi/images/total/icon-total.png?20160112) 0px 244px;
+    }
+    a {
+        display: block;
+        width: 90%;
+        height: 30px;
+    }
+}
+
+.bag-show:hover {
+    background: #fff;
+    box-shadow: 1px 1px 3px #fff;
+}
+
+.my-show {
+    position: relative;
+    span {
+        position: absolute;
+        left: -10px;
+        color: #ccc
+    }
+}
+
+.other-show {
+    position: relative;
+    span {
+        position: absolute;
+        left: 0;
+        color: #ddd
+    }
+}
+
+.login-show {
+    position: relative;
+    .logined-show {
+        position: absolute;
+        top: 20;
+        right: 20px;
+        display: none;
+    }
+}
+
+.other-show {
+    position: relative;
+    .nor-ul {
+        position: absolute;
+        right: 0;
+        top: 25px;
+        background: #fff;
+        display: none;
+        @include borderstyle();
+        @include borius ($br: 5px);
+        z-index: 10
+    }
+}
+
+.other-show:hover .nor-ul {
+    display: block;
+}
+
+
+/*导航logo部分*/
+
+.nav-cen {
+    position: relative;
+}
+
+.logo {
+    margin: 17px 0;
+    width: 210px;
+    height: 52px;
+    background: url(http://jp.juancdn.com/juanpi/images/total/header-total.gif?20160112) no-repeat;
+    background-position: -78px -52px;
+}
+
+.logo-con {
+    position: absolute;
+    left: 500px;
+    top: 10px;
+    width: 465px;
+    height: 33px;
+    background: url(http://jp.juancdn.com/juanpi/images/total/header-total.gif?20160112) no-repeat;
+    a {
+        display: inline-block;
+        width: 98px;
+        height: 16px;
+        margin: 0 20px;
+    }
+}
+
+.sosu {
+    width: 200px;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    @include borderstyle();
+    input {
+        width: 163px;
+        height: 33px;
+        color: #000;
+        background: #ddd;
+    }
+    span {
+        position: absolute;
+        top: -1px;
+        display: inline-block;
+        width: 37px;
+        height: 34px;
+        background: url(http://jp.juancdn.com/juanpi/images/total/header-total.gif?20160112) no-repeat;
+        background-position: right -65px;
+    }
+}
+
+.nav-bot {
+    ul {
+        li {
+            padding: 5px 24px 0px;
+            float: left;
+            a {
+                color: #000;
+                line-height: 30px;
+            }
+            a:hover {
+                color: #f22;
+            }
+        }
+        .nav-active {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: #f44;
+            a {
+                color: #fff;
+            }
+            a:hover {
+                color: #fff;
+            }
+        }
+    }
+}

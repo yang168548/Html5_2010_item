@@ -1,8 +1,11 @@
 @charset "utf-8";
 @import "reset";
+@import"nav";
+@import"footer";
 $boxwidth:1200px;
 $r:right;
 $l:left;
+$bx:-24px;
 @mixin borderstyle ($w:1px, $c:#ccc, $s:solid) {
     border: $w $c $s;
 }
@@ -15,111 +18,307 @@ $l:left;
     -moz-border-radius: $br;
 }
 
-.nav-top {
+@mixin posr() {
+    position: relative;
+}
+
+@mixin posa() {
+    position: absolute;
+}
+
+@mixin bgc($c:#fff) {
+    background: $c;
+}
+
+.body {
     width: 100%;
-    background: #f6f6f6;
-    .nav-con {
-        width: $boxwidth;
-        margin: 0 auto;
-        .top-right {
-            width: 40%;
-            float: $r;
+    @include bgc(#f5f5f5);
+}
+
+.banner {
+    height: 380px;
+    @include posr();
+}
+
+
+/*轮播图 */
+
+.banner-list {
+    width: 100%;
+    @include posr();
+    li {
+        width: 700px;
+        height: 360px;
+        @include posa();
+        left: 220px;
+        top: 20px;
+        z-index: 0;
+        opacity: 0;
+    }
+    .ban-active {
+        z-index: 1;
+        opacity: 1;
+    }
+    .r-1 {
+        background: url(https://goods5.juancdn.com/bao/201208/9/e/5fcf36aa09ef0f79db7f8263_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat;
+    }
+    .r-2 {
+        background: url(https://goods7.juancdn.com/bao/201208/d/c/5fcf35d33f908243cb6a6059_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat;
+    }
+    .r-3 {
+        background: url(https://goods4.juancdn.com/bao/201208/7/d/5fcf35bb569ede7e6c395c54_700x360.jpg?iopcmd=convert&Q=88&dst=jpg) no-repeat;
+    }
+}
+
+
+/*轮播图左 */
+
+.banner-l {
+    @include bgc();
+    @include posa();
+    .show-l {
+        width: 210px;
+        height: 380px;
+        box-sizing: border-box;
+        padding: 2px 10px 10px;
+        li {
+            width: 190px;
+            height: 54px;
+            padding: 1px;
+            box-sizing: border-box;
+            border-bottom: 1px double #ccc;
+            @include posr();
+            a {
+                float: left;
+                color: #555;
+                width: 94px;
+                height: 50px;
+                line-height: 54px;
+                text-align: center;
+                @include posr();
+                &:hover {
+                    color: #f22;
+                    i {
+                        background-position-y: -24px;
+                    }
+                }
+                i {
+                    @include posa();
+                    top: 15px;
+                    left: 5px;
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    background: url(http://jp.juancdn.com/juanpi/images/global/ct_icons.png?20160112) no-repeat;
+                }
+                @for $i from 1 through 14 {
+                    .i-#{$i} {
+                        background-position-x: ($bx*$i)+24px;
+                    }
+                }
+            }
+            span {
+                @include posa();
+                left: 90px;
+                top: 20px;
+                width: 0px;
+                display: inline-block;
+                height: 25px;
+                border-right: 1px double #ccc;
+            }
         }
     }
 }
 
-.login-show,
-.my-show,
-.bag-show,
-.other-show {
-    width: 25%;
-    float: $l;
-    font-size: 12px;
+
+/*轮播图  右*/
+
+.banner-r {
+    @include posa();
+    right: 0;
+    top: 20px;
+    .show-r {
+        width: 251px;
+        height: 360px;
+        li {
+            width: 250px;
+            height: 120px;
+            a {
+                float: $l;
+                width: 125px;
+                height: 120px;
+                display: block;
+                box-sizing: border-box;
+                border-bottom: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+            }
+            i {
+                display: inline-block;
+                width: 124px;
+                height: 119px;
+            }
+            span {
+                display: inline-block;
+                width: 250px;
+                height: 120px;
+            }
+        }
+    }
+}
+
+.show-r1 {
+    background: url(http://s.juancdn.com/juanpi/images/banners/r-1.jpg) no-repeat;
+}
+
+.show-r2 {
+    background: url(http://s.juancdn.com/juanpi/images/banners/r-2.jpg) no-repeat;
+}
+
+.show-r3 {
+    background: url(http://s.juancdn.com/juanpi/images/banners/r-3.jpg) no-repeat;
+}
+
+.show-r4 {
+    background: url(http://s.juancdn.com/juanpi/images/banners/r-4.jpg) no-repeat;
+}
+
+.show-r5 {
+    background: url(http://s.juancdn.com/juanpi/images/banners/r-5.jpg) no-repeat;
+}
+
+
+/*轮播图  左右键  需要js写hover效果*/
+
+.banner-lr {
+    @include posa();
+    top: 170px;
+    left: 220px;
+    z-index: 15;
+    // display: none;
+    span {
+        @include posa();
+        display: block;
+        width: 30px;
+        height: 40px;
+        background: rgba($color: #555, $alpha: 0.8);
+        padding: 8px 7px;
+        box-sizing: border-box;
+        i {
+            display: block;
+            width: 16px;
+            height: 24px;
+            background: url(http://jp.juancdn.com/juanpi/images/global/arrow.png) no-repeat;
+        }
+        .lrr {
+            background-position-x: -16px;
+        }
+    }
+}
+
+.lr-right {
+    right: -700px;
+}
+
+
+/*轮播图小圆点*/
+
+.banner-key {
+    @include posa();
+    top: 350px;
+    width: 60px;
     height: 30px;
-    line-height: 30px;
-    text-align: center;
-    a {
-        color: #000;
-        margin: 0 3px;
-    }
+    left: 500px;
+    z-index: 15;
 }
 
-.login-show,
-.my-show,
-.other-show {
-    a:hover {
-        color: #f11;
-    }
-}
-
-.login-show :nth-child(2) {
-    color: #f11;
-}
-
-.bag-show {
-    position: relative;
-    span {
-        position: absolute;
-        display: block;
-        top: 6px;
-        left: 18px;
-        width: 16px;
-        height: 18px;
-        background: url(https://jp.juancdn.com/juanpi/images/total/icon-total.png?20160112) 0px 244px;
-    }
-    a {
-        display: block;
-        width: 90%;
-        height: 30px;
-    }
-}
-
-.bag-show:hover {
-    background: #fff;
-    box-shadow: 1px 1px 3px #fff;
-}
-
-.my-show {
-    position: relative;
-    span {
-        position: absolute;
-        left: -10px;
-        color: #ccc
-    }
-}
-
-.other-show {
-    position: relative;
-    span {
-        position: absolute;
-        left: 0;
-        color: #ddd
-    }
-}
-
-.login-show {
-    position: relative;
-    .logined-show {
-        position: absolute;
-        top: 20;
-        right: 20px;
-        display: none;
-    }
-}
-
-.other-show {
-    position: relative;
-    .nor-ul {
-        position: absolute;
-        right: 0;
-        top: 25px;
+.banner-lk {
+    li {
+        float: $l;
+        width: 5px;
+        height: 5px;
+        margin: 0 5px;
         background: #fff;
-        display: none;
-        @include borderstyle();
-        @include borius ($br: 5px)
+        @include borderstyle(2px, solid, rgba($color: #555, $alpha: 0));
+        @include borius(50%)
+    }
+    .lk-a {
+        @include borderstyle(2px, solid, #fff);
+        background: rgba($color: #555, $alpha: 0);
     }
 }
 
-.other-show:hover .nor-ul {
-    display: block;
+
+/*今日品牌*/
+
+.brand {
+    margin-top: 30px;
+    @include bgc();
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.h5 {
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 900;
+    vertical-align: bottom;
+    span {
+        font-size: 14px;
+        font-weight: normal;
+        color: #ccc;
+    }
+}
+
+.brand-show {
+    display: flex;
+    li {
+        width: 278px;
+        height: 170px;
+        margin: auto;
+        @include posr();
+        img {
+            width: 100%;
+            @include borderstyle();
+            box-sizing: border-box;
+        }
+        div {
+            width: 278px;
+            height: 20px;
+            @include posa();
+            background: rgba(150, 150, 150, 0.8);
+            top: 96px;
+            font-size: 12px;
+            color: #fff;
+            span {
+                display: inline-block;
+                margin: 0px 20px 0px 60px;
+                width: 14px;
+                height: 15px;
+                background: url(http://jp.juancdn.com/juanpi/images/icon/clock.png) no-repeat;
+                background-position-y: 1px;
+                vertical-align: middle;
+            }
+        }
+        p {
+            margin-top: 20px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        a {
+            width: 68px;
+            height: 26px;
+            display: block;
+            @include posa();
+            bottom: 5px;
+            color: #f11;
+            right: 20px;
+            line-height: 26px;
+            text-align: center;
+            @include borius(3px);
+            &:hover {
+                @include bgc(#f11);
+                color: #fff;
+            }
+        }
+    }
 }
