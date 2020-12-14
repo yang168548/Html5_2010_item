@@ -84,6 +84,11 @@ div {
 nav {
   border-bottom: 2px solid #f44; }
 
+.body {
+  width: 100%;
+  background: #f5f5f5;
+  padding-bottom: 50px; }
+
 .nav-top {
   width: 100%;
   background: #f6f6f6; }
@@ -315,11 +320,6 @@ footer {
 body {
   position: relative; }
 
-.body {
-  width: 100%;
-  background: #f5f5f5;
-  padding-bottom: 50px; }
-
 .banner {
   height: 380px;
   position: relative; }
@@ -467,7 +467,8 @@ body {
   position: absolute;
   top: 170px;
   left: 220px;
-  z-index: 15; }
+  z-index: 15;
+  display: none; }
   .banner-lr span {
     position: absolute;
     display: block;
@@ -535,7 +536,8 @@ body {
     width: 278px;
     height: 170px;
     margin: auto;
-    position: relative; }
+    position: relative;
+    background: #f5f5f5; }
     .brand-show li img {
       width: 100%;
       border: 1px #ccc solid;
@@ -579,6 +581,18 @@ body {
         background: #f11;
         color: #fff; }
 
+.lg-show {
+  width: 1160px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .lg-show li {
+    width: 100px;
+    height: 35px;
+    margin: 10px auto;
+    line-height: 35px; }
+
 /*今日新品*/
 .new-v {
   background: #fff;
@@ -613,10 +627,16 @@ body {
       font-size: 18px;
       color: #f22; }
     .new-pic li p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       line-height: 25px;
       font-size: 12px; }
+    .new-pic li:hover .my-like {
+      display: block; }
     .new-pic li .my-like {
       position: absolute;
+      display: none;
       width: 28px;
       height: 28px;
       top: 20px;
@@ -634,7 +654,7 @@ body {
         width: 14px;
         height: 14px;
         background: url(http://jp.juancdn.com/juanpi/images/list/my-like.png) no-repeat; }
-      .new-pic li .my-like .active {
+      .new-pic li .my-like .like-active {
         background-position-y: -20px; }
 
 .pg {

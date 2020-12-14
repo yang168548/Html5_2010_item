@@ -1,0 +1,94 @@
+@charset "utf-8";
+@import"txt";
+@import "reset";
+@import"nav";
+@import"footer";
+.body {
+    padding-top: 20px;
+}
+
+.reg-big {
+    box-sizing: border-box;
+    @include bgc();
+    @include borderstyle();
+    display: flex;
+    flex-wrap: wrap;
+    >p {
+        padding: 20px;
+        width: 1160px;
+        color: #ccc;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #ccc;
+        .h4 {
+            font-size: 16px;
+            font-weight: 900;
+            color: #f22;
+        }
+    }
+}
+
+#reg {
+    width: 600px;
+    height: 410px;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-left: 60px;
+    font-size: 18px;
+    line-height: 50px;
+    form {
+        padding-left: 20px;
+        border-right: 1px solid #ccc;
+    }
+    span {
+        display: inline-block;
+        width: 120px;
+        padding-right: 10px;
+        text-align: right;
+    }
+    a {
+        color: #000;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 12px;
+        margin: 0 10px;
+        padding: 0 12px;
+        line-height: 32px;
+        @include bgc(#ddd);
+        vertical-align: middle;
+    }
+    u {
+        font-size: 12px;
+    }
+    input {
+        width: 200px;
+        height: 30px;
+        @include borderstyle();
+        vertical-align: middle;
+    }
+    .yz {
+        width: 80px;
+    }
+    .sub {
+        margin-left: 100px;
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        @include bgc(#f55);
+        @include borius(10px)
+    }
+    .che {
+        width: 14px;
+        height: 14px;
+        margin-left: 50px;
+        vertical-align: middle;
+    }
+}
+
+#reg-r {
+    box-sizing: border-box;
+    padding: 30px;
+    img {
+        margin-left: 20px;
+    }
+}

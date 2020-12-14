@@ -84,6 +84,11 @@ div {
 nav {
   border-bottom: 2px solid #f44; }
 
+.body {
+  width: 100%;
+  background: #f5f5f5;
+  padding-bottom: 50px; }
+
 .nav-top {
   width: 100%;
   background: #f6f6f6; }

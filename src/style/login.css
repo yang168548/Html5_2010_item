@@ -317,80 +317,84 @@ footer {
       .app-r div span p {
         color: #aaa; }
 
-.render {
-  width: 1200px;
-  height: 420px;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start; }
-  .render .red-list {
-    margin: auto 10px;
-    width: 100px;
-    height: 400px;
-    box-sizing: border-box; }
-    .render .red-list li {
-      margin-top: 8px; }
-      .render .red-list li img {
-        margin: 0 auto; }
-  .render .red-viw {
-    margin: auto 15px;
-    width: 35%;
-    height: 400px;
-    box-sizing: border-box; }
-  .render .red-car {
-    margin: auto 20px;
-    width: 40%;
-    height: 400px;
-    box-sizing: border-box; }
+.body {
+  padding-top: 20px; }
 
-.red-car {
+.reg-big {
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px #ccc solid;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px; }
-  .red-car > p {
+  flex-wrap: wrap; }
+  .reg-big > p {
+    padding: 20px;
+    width: 1160px;
+    color: #ccc;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc; }
+    .reg-big > p .h4 {
+      font-size: 16px;
+      font-weight: 900;
+      color: #f22; }
+
+#reg {
+  width: 600px;
+  height: 410px;
+  box-sizing: border-box;
+  padding: 30px;
+  padding-left: 100px;
+  font-size: 18px;
+  line-height: 50px; }
+  #reg span {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    text-align: right;
+    vertical-align: top; }
+  #reg .name {
+    background: url(https://jp.juancdn.com/user/images/login/name2.jpg?150907) no-repeat; }
+  #reg .password {
+    background: url(https://jp.juancdn.com/user/images/login/code2.jpg?150907) no-repeat; }
+  #reg div {
+    height: 40px;
+    box-sizing: border-box;
+    margin-top: 20px;
     width: 300px;
-    height: 50px;
-    font-size: 30px;
-    line-height: 50px;
-    font-weight: 900;
-    margin-bottom: 10px; }
-    .red-car > p:nth-of-type(2) {
-      color: #f22;
-      font-size: 20px;
-      background: rgba(255, 150, 150, 0.5); }
-  .red-car > div {
-    margin-top: 30px;
-    position: relative; }
-    .red-car > div span {
-      display: inline-block;
-      height: 40px;
-      font-size: 30px;
-      line-height: 40px;
-      margin-top: -10px;
-      vertical-align: middle; }
-    .red-car > div input {
-      width: 40px;
-      height: 25px;
-      text-align: center;
-      margin: 0 10px;
-      border: 1px #ccc solid;
-      vertical-align: middle; }
-    .red-car > div a {
-      display: block;
-      width: 100px;
-      height: 40px;
-      line-height: 40px;
-      color: #fff;
-      border: 1px #ccc solid;
-      border-radius: 20px;
-      -webkit-border-radius: 20px;
-      -o-border-radius: 20px;
-      -ms-border-radius: 20px;
-      -moz-border-radius: 20px;
-      background: #f22;
-      text-align: center; }
+    border: 1px #ccc solid; }
+  #reg #zc {
+    color: #aaa;
+    font-size: 12px;
+    margin: 150px; }
+  #reg u {
+    font-size: 12px; }
+  #reg input {
+    width: 200px;
+    height: 38px;
+    font-size: 16px;
+    vertical-align: top; }
+  #reg .yz {
+    width: 80px; }
+  #reg .sub {
+    width: 300px;
+    height: 40px;
+    color: #fff;
+    background: #f55;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px; }
+  #reg .che {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle; }
 
-/*# sourceMappingURL=detail.css.map */
+#reg-r {
+  box-sizing: border-box;
+  padding: 30px; }
+  #reg-r img {
+    margin-left: 20px; }
+
+/*# sourceMappingURL=login.css.map */

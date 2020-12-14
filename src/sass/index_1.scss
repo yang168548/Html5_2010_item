@@ -7,12 +7,6 @@
         @include posr();
     }
     
-    .body {
-        width: 100%;
-        @include bgc(#f5f5f5);
-        padding-bottom: 50px;
-    }
-    
     .banner {
         height: 380px;
         @include posr();
@@ -164,7 +158,7 @@
         top: 170px;
         left: 220px;
         z-index: 15;
-        // display: none;
+        display: none;
         span {
             @include posa();
             display: block;
@@ -242,6 +236,7 @@
             height: 170px;
             margin: auto;
             @include posr();
+            @include bgc(#f5f5f5);
             img {
                 width: 100%;
                 @include borderstyle();
@@ -288,6 +283,20 @@
             }
         }
     }
+    
+    .lg-show {
+        width: 1160px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        li {
+            width: 100px;
+            height: 35px;
+            margin: 10px auto;
+            line-height: 35px;
+        }
+    }
     /*今日新品*/
     
     .new-v {
@@ -327,11 +336,18 @@
                 color: #f22;
             }
             p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 line-height: 25px;
                 font-size: 12px;
             }
+            &:hover .my-like {
+                display: block;
+            }
             .my-like {
                 @include posa();
+                display: none;
                 width: 28px;
                 height: 28px;
                 top: 20px;
@@ -346,7 +362,7 @@
                     height: 14px;
                     background: url(http://jp.juancdn.com/juanpi/images/list/my-like.png) no-repeat;
                 }
-                .active {
+                .like-active {
                     background-position-y: -20px;
                 }
             }
