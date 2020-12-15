@@ -58,8 +58,12 @@
             line-height: 25px;
             font-size: 12px;
         }
+        &:hover .my-like {
+            display: block;
+        }
         .my-like {
             @include posa();
+            display: none;
             width: 28px;
             height: 28px;
             top: 20px;
@@ -74,7 +78,7 @@
                 height: 14px;
                 background: url(http://jp.juancdn.com/juanpi/images/list/my-like.png) no-repeat;
             }
-            .active {
+            .like-active {
                 background-position-y: -20px;
             }
         }

@@ -331,9 +331,12 @@ footer {
     height: 400px;
     box-sizing: border-box; }
     .render .red-list li {
-      margin-top: 8px; }
+      margin-top: 5px; }
       .render .red-list li img {
-        margin: 0 auto; }
+        margin: 0 auto;
+        border: 1px solid transparent; }
+        .render .red-list li img:hover {
+          border-color: #555; }
   .render .red-viw {
     margin: auto 15px;
     width: 35%;
@@ -361,6 +364,14 @@ footer {
       color: #f22;
       font-size: 20px;
       background: rgba(255, 150, 150, 0.5); }
+  .red-car .de-title {
+    font-size: 16px;
+    line-height: 20px; }
+  .red-car .de-num span {
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    cursor: pointer; }
   .red-car > div {
     margin-top: 30px;
     position: relative; }

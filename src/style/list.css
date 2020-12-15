@@ -364,8 +364,11 @@ footer {
     .new-pic li p {
       line-height: 25px;
       font-size: 12px; }
+    .new-pic li:hover .my-like {
+      display: block; }
     .new-pic li .my-like {
       position: absolute;
+      display: none;
       width: 28px;
       height: 28px;
       top: 20px;
@@ -383,7 +386,7 @@ footer {
         width: 14px;
         height: 14px;
         background: url(http://jp.juancdn.com/juanpi/images/list/my-like.png) no-repeat; }
-      .new-pic li .my-like .active {
+      .new-pic li .my-like .like-active {
         background-position-y: -20px; }
 
 .pg {

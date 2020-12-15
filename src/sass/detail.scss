@@ -17,9 +17,13 @@
         height: 400px;
         box-sizing: border-box;
         li {
-            margin-top: 8px;
+            margin-top: 5px;
             img {
                 margin: 0 auto;
+                border: 1px solid transparent;
+                &:hover {
+                    border-color: #555;
+                }
             }
         }
     }
@@ -53,6 +57,18 @@
             color: #f22;
             font-size: 20px;
             background: rgba(255, 150, 150, 0.5);
+        }
+    }
+    .de-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .de-num {
+        span {
+            text-align: center;
+            display: inline-block;
+            width: 30px;
+            cursor: pointer;
         }
     }
     >div {

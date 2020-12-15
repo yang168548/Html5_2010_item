@@ -87,7 +87,7 @@ define(['jlazyload'], () => {
             //渲染
             const $list = $('.new-pic');
             $.ajax({
-                url: 'http://localhost/new/y_item.com/php/listdata.php',
+                url: 'http://10.31.161.15/new/y_item.com/php/listdata.php',
                 dataType: 'json'
             }).done(function(data) {
                 // console.log(data);
@@ -95,7 +95,7 @@ define(['jlazyload'], () => {
                 $.each(data, function(index, value) {
                     $strhtml += `
                     <li id="${value.sid}">
-                    <a href="http://localhost/new/y_item.com/src/detail.html?sid=${value.sid}">
+                    <a href="detail.html?sid=${value.sid}">
                         <img class="lazy" data-original="${value.url}" width="220" height="220" >
                     </a>
                     <span>￥<i >${value.price}</i></span>
@@ -119,6 +119,29 @@ define(['jlazyload'], () => {
             //         $('.my-like').find('U').addClass('like-active');
             //     })
             // })
+
+
+            var $topnav = $('.v-6').parent();
+
+            function scroll() {
+                var $scrolltop = $(window).scrollTop(); //获取滚动条的top值
+                if ($scrolltop >= 300) {
+                    $topnav.show();
+                } else {
+                    console.log(1);
+                    $topnav.hide();
+                }
+            }
+            scroll();
+            $(window).on('scroll', function() {
+                scroll();
+            });
+
+            $($topnav).on('click', function() {
+                $('html').animate({
+                    scrollTop: 0
+                });
+            });
         }
     }
 })
