@@ -317,4 +317,155 @@ footer {
       .app-r div span p {
         color: #aaa; }
 
+#main {
+  background: #f5f5f5;
+  padding-bottom: 100px;
+  padding-top: 40px; }
+  #main .banxin .shopcar {
+    background: #fff; }
+    #main .banxin .shopcar .list-head > div {
+      float: left; }
+    #main .banxin .shopcar .list-head .p-check {
+      width: 110px;
+      height: 70px;
+      line-height: 70px;
+      color: #424242;
+      font-size: 18px; }
+      #main .banxin .shopcar .list-head .p-check input {
+        width: 18px;
+        height: 18px;
+        margin: 0 20px; }
+    #main .banxin .shopcar .list-head .p-img {
+      width: 110px;
+      height: 70px; }
+      #main .banxin .shopcar .list-head .p-img img {
+        width: 70px;
+        height: 70px; }
+    #main .banxin .shopcar .list-head .p-title {
+      width: 380px;
+      height: 70px;
+      line-height: 70px;
+      color: #424242;
+      font-size: 18px; }
+    #main .banxin .shopcar .list-head .p-price {
+      width: 158px;
+      height: 70px;
+      line-height: 70px;
+      color: #424242;
+      font-size: 18px; }
+    #main .banxin .shopcar .list-head .p-num {
+      width: 150px;
+      height: 70px;
+      line-height: 70px;
+      color: #424242;
+      font-size: 18px; }
+    #main .banxin .shopcar .list-head .p-sum {
+      width: 200px;
+      height: 70px;
+      line-height: 70px;
+      color: #424242;
+      font-size: 18px; }
+    #main .banxin .shopcar .list-head .p-del {
+      height: 70px;
+      line-height: 70px;
+      color: #424242;
+      font-size: 18px; }
+  #main .banxin .list-body {
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 10px; }
+    #main .banxin .list-body > div {
+      float: left; }
+  #main .banxin .p-check {
+    width: 110px;
+    height: 70px;
+    line-height: 70px; }
+    #main .banxin .p-check input {
+      width: 18px;
+      height: 18px;
+      margin: 0 20px; }
+  #main .banxin .p-img {
+    width: 110px;
+    height: 70px; }
+  #main .banxin .p-title {
+    padding-top: 20px;
+    width: 380px;
+    height: 70px;
+    box-sizing: border-box; }
+    #main .banxin .p-title a {
+      display: inline-block;
+      width: 280px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #424242; }
+  #main .banxin .p-price {
+    width: 158px;
+    height: 70px;
+    line-height: 70px;
+    color: #424242;
+    font-size: 18px; }
+  #main .banxin .p-num {
+    margin-left: -40px;
+    width: 150px;
+    height: 70px;
+    display: flex; }
+    #main .banxin .p-num .de-num {
+      padding-top: 20px;
+      height: 40px;
+      box-sizing: border-box; }
+      #main .banxin .p-num .de-num span {
+        display: inline-block;
+        height: 40px;
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: -10px;
+        vertical-align: middle;
+        text-align: center;
+        display: inline-block;
+        width: 30px;
+        cursor: pointer; }
+      #main .banxin .p-num .de-num input {
+        width: 40px;
+        height: 25px;
+        text-align: center;
+        margin: 0 10px;
+        border: 1px #ccc solid;
+        vertical-align: middle; }
+  #main .banxin .p-sum {
+    margin-left: 40px;
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+    color: #ff6700;
+    font-size: 18px; }
+  #main .banxin .p-del {
+    padding-top: 20px;
+    height: 70px;
+    box-sizing: border-box; }
+    #main .banxin .p-del a {
+      color: #424242; }
+  #main .settle {
+    height: 50px;
+    background: #fff;
+    margin-top: 20px; }
+    #main .settle div {
+      float: right; }
+      #main .settle div p {
+        color: #ff6700;
+        line-height: 50px;
+        font-size: 30px; }
+        #main .settle div p span {
+          font-size: 15px; }
+        #main .settle div p a {
+          display: inline-block;
+          text-align: center;
+          width: 200px;
+          height: 45px;
+          color: #fff;
+          background: #f55;
+          font-size: 18px;
+          margin-left: 50px; }
+          #main .settle div p a:hover {
+            background: #f55; }
+
 /*# sourceMappingURL=cart.css.map */

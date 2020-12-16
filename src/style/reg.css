@@ -364,6 +364,9 @@ footer {
     line-height: 32px;
     background: #ddd;
     vertical-align: middle; }
+  #reg i {
+    padding: 5px;
+    font-size: 14px; }
   #reg u {
     font-size: 12px; }
   #reg input {

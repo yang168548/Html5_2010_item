@@ -8,6 +8,7 @@
     <meta content="女装,女装特卖,品牌女装,潮流女装,女装新款,1折,特卖,包邮,卷皮折扣,卷皮网" name="keywords">
     <meta content="卷皮折扣每天为您精选服饰女装、时尚女装、品牌女装、潮流女装、女装新款、女装特卖,全场女装低至1折起包邮,每天10:00点开始!" name="description">
     <link rel="stylesheet" href="style/cart.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js" defer async=true data-main="script/main.js" id="page" targetpage="cart_module"></script>
 </head>
 
 <body>
@@ -71,7 +72,7 @@
                         <a href="#">首页</a>
                     </li>
                     <li>
-                        <a href="#">品牌折扣</a>
+                        <a href="list.html">品牌折扣</a>
                     </li>
                     <li>
                         <a href="#">9.9包邮</a>
@@ -86,32 +87,58 @@
     </header>
     <!-- 内容 -->
     <div class="body">
-        <div class="thead box-con">
-            <div class="th-tab"></div>
-            <div class="th-img"></div>
-            <div class="th-title">商品名称</div>
-            <div class="th-price"> 单价</div>
-            <div class="th-num">商品数量</div>
-            <div class="th-sum">小计</div>
-            <div class="th-act">操作</div>
-
-        </div>
-        <div class="tab box-con">
-            <div class="tbody">
-                <div class="tb-tab"></div>
-                <div class="tb-img"></div>
-                <div class="tb-title">商品名称</div>
-                <div class="tb-price"> 单价</div>
-                <div class="tb-num"><span>-</span><input type="text"><span>+</span></div>
-                <div class="tb-sum">小计</div>
-                <div class="tb-act"><a href="#">删除</a></div>
-            </div>
-            <div class="tfoot">
-
+        <div class="box-con">
+            <div id="main">
+                <div class="banxin">
+                    <div class="shopcar">
+                        <div class="list-head clear_fix">
+                            <div class="p-check">
+                                <input type="checkbox" class="allck"> 全选
+                            </div>
+                            <div class="p-img">&nbsp;</div>
+                            <div class="p-title">商品名称</div>
+                            <div class="p-price">单价</div>
+                            <div class="p-num">数量</div>
+                            <div class="p-sum">小计</div>
+                            <div class="p-del">操作</div>
+                        </div>
+                        <div class="list-body2">
+                            <div class="list-body clear_fix" style="display: none;">
+                                <div class="p-check">
+                                    <input type="checkbox" class="cek" data-pass="flase">
+                                </div>
+                                <div class="p-img">
+                                    <a href="javascript:;">
+                                        <img src="" alt="" width="70" height="70">
+                                    </a>
+                                </div>
+                                <div class="p-title">
+                                    <a href="javascript:;"></a>
+                                </div>
+                                <div class="p-price">0</div>
+                                <div class="p-num">
+                                    <div class="de-num"><span>-</span><input type="text" value="1"><span>+</span></div>
+                                </div>
+                                <div class="p-sum"></div>
+                                <div class="p-del">
+                                    <a href="javascript:;"><img src="http://cart.juanpi.com/static/media/delete.91359608.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settle clear">
+                        <div>
+                            <p>
+                                <span>合计：</span>0.00<span>元</span>
+                                <a href="javascript:;">去结算</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- 脚部 -->
+    <!--脚部 -->
     <footer>
         <div class="box-con foot-con">
             <div class="foot-t">

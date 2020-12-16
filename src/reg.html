@@ -8,6 +8,7 @@
     <meta content="女装,女装特卖,品牌女装,潮流女装,女装新款,1折,特卖,包邮,卷皮折扣,卷皮网" name="keywords">
     <meta content="卷皮折扣每天为您精选服饰女装、时尚女装、品牌女装、潮流女装、女装新款、女装特卖,全场女装低至1折起包邮,每天10:00点开始!" name="description">
     <link rel="stylesheet" href="style/reg.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js" defer async=true data-main="script/main.js" id="page" targetpage="reg_module"></script>
 </head>
 
 <body>
@@ -17,8 +18,8 @@
             <div class="nav-con  box-con clear_fix">
                 <div class="top-right">
                     <div class="login-show">
-                        <a href="http://localhost/new/y_item.com/src/login.html">登陆</a>
-                        <a href="http://localhost/new/y_item.com/src/reg.html">免费注册</a>
+                        <a href="login.html">登陆</a>
+                        <a href="reg.html">免费注册</a>
                         <div class="logined-show">
                             <span class="u-name"></span>
                             <a href="#">退出</a>
@@ -30,7 +31,7 @@
                         <a href="#">商家入驻</a>
                     </div>
                     <div class="bag-show">
-                        <a href="http://localhost/new/y_item.com/src/cart.html">
+                        <a href="cart.html">
                             <span></span> 购物袋
                         </a>
                     </div>
@@ -52,7 +53,7 @@
         </div>
         <nav>
             <div class="box-con nav-cen">
-                <a href="http://localhost/new/y_item.com/src/index_1.html">
+                <a href="index_1.html">
                     <div class="logo"></div>
                 </a>
                 <div class="logo-con">
@@ -89,10 +90,10 @@
         <section class="box-con reg-big">
             <p><span class="h4">新用户注册</span> &nbsp;/&nbsp; 注册卷皮网,赢积分换好礼！</p>
             <div id="reg">
-                <form action="">
-                    <p><span>手机号码：</span><input type="text"></p>
-                    <p><span>输入密码：</span><input type="text"></p>
-                    <p><span>确认密码：</span><input type="text"></p>
+                <form action="http://10.31.161.15/new/y_item.com/php/reg.php">
+                    <p><span>手机号码：</span><input type="tel" name="phone" id="phone"><i class="tel">请输入手机号</i></p>
+                    <p><span>输入密码：</span><input type="password" name="password" data-name="name1"><i class="password">请输入密码</i></p>
+                    <p><span>确认密码：</span><input type="password" name="password" data-name="name2"><i class="password">请输入密码</i></p>
                     <p><span>验证码：</span><input type="text" class="yz"><a href="#">获取短信验证码</a></p>
                     <p><input type="submit" class="sub" value="立即注册"></p>
                     <p><input type="checkbox" class="che"><u>我已阅读并接受《用户协议》</u></p>

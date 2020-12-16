@@ -79,12 +79,40 @@ define(['jcookie'], () => {
                 })
                 const $jia = $('.de-num span').eq(1);
                 $jia.on('click', function() {
-                    let $val = parseInt($('.de-num input').val());
-                    $val = $val + 1;
-                    console.log($val);
-                    $('.de-num input').val($val)
+                        let $val = parseInt($('.de-num input').val());
+                        $val = $val + 1;
+                        console.log($val);
+                        $('.de-num input').val($val)
 
-                })
+                    })
+                    //coolie部分
+                let arrsid = []; //存放cookie sid
+                let arrnum = []; //把商品数量存放入cookie
+
+                //获取当前cookie数据
+                function getcta() {
+                    if ($.cookie('cookiesid') && $.cookie('cookienum')) {
+                        arrsid = $.cookie('cookiesid').split(',');
+                        arrnum = $.cookie('cookienum').split(',');
+                    }
+                }
+
+                $('.de-cart a').on('click', function() {
+                    getcta();
+                    if ($.inArray($sid, arrsid) === -1) { //第一次添加商品
+                        arrsid.push($sid); //添加sid
+                        $.cookie('cookiesid', arrsid, { expires: 10, path: '/' });
+                        arrnum.push($('.de-num input').val()); //添加数量
+                        $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
+                    } else { //多次添加，数量累加
+                        //通过$sid获取商品数量的索引
+
+                        let $index = $.inArray($sid, arrsid);
+                        //原来的数量+新加的数量进行重新赋值，添加cookie
+                        arrnum[$index] = parseInt(arrnum[$index]) + parseInt($('.de-num input').val()); //重新赋值
+                        $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
+                    }
+                });
 
             });
         }

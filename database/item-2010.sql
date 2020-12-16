@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： localhost
--- 生成日期： 2020-12-11 19:04:35
+-- 生成日期： 2020-12-16 22:42:05
 -- 服务器版本： 5.7.26
 -- PHP 版本： 7.3.4
 
@@ -41,7 +41,7 @@ CREATE TABLE `juan` (
 --
 
 INSERT INTO `juan` (`sid`, `url`, `title`, `price`, `urls`) VALUES
-(1, 'https://goods6.juancdn.com/goods/201130/a/a/5fc4e6356c34d275ae7eed0f_800x800.jpg?imageMogr2/thumbnail/310x310!/quality/88!/format/jpg', '秋冬加绒加厚长袖外套', 48.8, 'https://goods6.juancdn.com/goods/201130/a/a/5fc4e6356c34d275ae7eed0f_800x800.jpg?imageMogr2/thumbnail/58x58!/quality/88!/format/jpg，https://goods5.juancdn.com/goods/201130/8/3/5fc4e6b40a214d4c0e0dd639_800x800.jpg?iopcmd=thumbnail&type=11&height=58&width=58%7Ciopcmd=convert&Q=88&dst=jpg，https://goods7.juancdn.com/goods/201130/d/6/5fc4e643b776aa693f23b939_800x800.jpg?iopcmd=thumbnail&type=11&height=58&width=58%7Ciopcmd=convert&Q=88&dst=jpg，https://goods4.juancdn.com/goods/201130/7/d/5fc4e62a597f1d7ded472238_800x800.jpg?imageMogr2/thumbnail/58x58!/quality/88!/format/jpg，https://goods6.juancdn.com/goods/201130/a/a/5fc4e6356c34d275ae7eed0f_800x800.jpg?imageMogr2/thumbnail/58x58!/quality/88!/format/jpg，https://goods5.juancdn.com/goods/201130/9/7/5fc4e6b115ba48490b0dbd1e_800x800.jpg?iopcmd=thumbnail&type=11&height=58&width=58%7Ciopcmd=convert&Q=88&dst=jpg'),
+(1, 'https://goods6.juancdn.com/goods/201130/a/a/5fc4e6356c34d275ae7eed0f_800x800.jpg', '秋冬加绒加厚长袖外套', 48.8, 'https://goods6.juancdn.com/goods/201130/a/a/5fc4e6356c34d275ae7eed0f_800x800.jpg,https://goods5.juancdn.com/goods/201130/8/3/5fc4e6b40a214d4c0e0dd639_800x800.jpg,https://goods7.juancdn.com/goods/201130/d/6/5fc4e643b776aa693f23b939_800x800.jpg,https://goods4.juancdn.com/goods/201130/7/d/5fc4e62a597f1d7ded472238_800x800.jpg,https://goods6.juancdn.com/goods/201130/a/a/5fc4e6356c34d275ae7eed0f_800x800.jpg,https://goods5.juancdn.com/goods/201130/9/7/5fc4e6b115ba48490b0dbd1e_800x800.jpg'),
 (2, 'https://goods5.juancdn.com/goods/201016/8/6/5f88ff7b33b089548e5f08f7_800x800.jpg', '2020秋季新款哈伦裤宽松大码修身高腰直筒小脚休闲长裤Y', 87, 'https://goods5.juancdn.com/goods/201016/8/6/5f88ff7b33b089548e5f08f7_800x800.jpg,https://goods2.juancdn.com/goods/201115/2/e/5fb0da8733b0897180722a29_800x800.jpg,https://goods2.juancdn.com/goods/201016/3/5/5f88ffba33b08953621ea7a3_800x800.jpg,https://goods1.juancdn.com/goods/201016/0/d/5f88ffb7b6f8ea4976319491_800x800.jpg,https://goods4.juancdn.com/goods/201016/6/c/5f88ffb533b089535447cac3_800x800.jpg,https://goods2.juancdn.com/goods/201016/2/e/5f88fe30b6f8ea495959608c_800x800.jpg'),
 (3, 'https://b1.beicdn.com/upload/item/2007/17/76551027630000_800x800.jpg', '实拍冬季新款女装千鸟格毛呢外套中长款过膝格子羊毛呢子大衣秋冬', 185, 'https://b1.beicdn.com/upload/item/2007/17/76551027630000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76553376540000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76555605660000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76557690460000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76560775270000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76563407130000_800x800.jpg'),
 (4, 'https://goods2.juancdn.com/goods/201102/3/3/5f9fbfea33b0894f1c25db7c_800x800.jpg', '秋冬德绒加厚打底衫2020韩版自带发热半高领长袖衫YB7', 59, 'https://goods2.juancdn.com/goods/201102/3/3/5f9fbfea33b0894f1c25db7c_800x800.jpg,https://goods2.juancdn.com/goods/201102/2/8/5f9fbfe833b0894f10679dfd_800x800.jpg,https://goods1.juancdn.com/goods/201102/0/7/5f9fbfe633b0894f0705f853_800x800.jpg,https://goods4.juancdn.com/goods/201102/7/4/5f9fbfe433b0894f0247f263_800x800.jpg,https://goods2.juancdn.com/goods/201102/2/4/5f9fc0c1b6f8ea6f81177fbc_800x800.jpg,https://goods4.juancdn.com/goods/201102/7/0/5f9fc0be33b089765d610aeb_800x800.jpg'),
@@ -85,6 +85,26 @@ INSERT INTO `juan` (`sid`, `url`, `title`, `price`, `urls`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `reg`
+--
+
+CREATE TABLE `reg` (
+  `id` int(8) NOT NULL,
+  `phone` bigint(11) NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- 转存表中的数据 `reg`
+--
+
+INSERT INTO `reg` (`id`, `phone`, `password`, `date`) VALUES
+(100001, 1329888888, '123456', '2020-12-16 21:32:24');
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `registry`
 --
 
@@ -97,18 +117,6 @@ CREATE TABLE `registry` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `registry`
---
-
-INSERT INTO `registry` (`sid`, `username`, `password`, `email`, `date`) VALUES
-(46, 'zhangsan', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'zhangsan@126.com', '2020-12-07 11:00:29'),
-(47, '天马', 'e957977b0e27875dac1e95925deaa597cc510075', 'tianma@qq.com', '2020-12-07 16:57:11'),
-(48, 'root', 'dc76e9f0c0006e8f919e0c515c66dbba3982f785', 'root@rootbk.cn', '2020-12-07 17:04:04'),
-(49, 'root', 'dc76e9f0c0006e8f919e0c515c66dbba3982f785', '', '2020-12-07 17:16:18'),
-(50, 'a', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'xueyu@qq.com', '2020-12-07 17:17:52'),
-(51, 'timi', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'root@rootbk.cn', '2020-12-09 09:06:55');
-
---
 -- 转储表的索引
 --
 
@@ -117,6 +125,12 @@ INSERT INTO `registry` (`sid`, `username`, `password`, `email`, `date`) VALUES
 --
 ALTER TABLE `juan`
   ADD PRIMARY KEY (`sid`);
+
+--
+-- 表的索引 `reg`
+--
+ALTER TABLE `reg`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- 表的索引 `registry`
@@ -135,10 +149,16 @@ ALTER TABLE `juan`
   MODIFY `sid` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
+-- 使用表AUTO_INCREMENT `reg`
+--
+ALTER TABLE `reg`
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100002;
+
+--
 -- 使用表AUTO_INCREMENT `registry`
 --
 ALTER TABLE `registry`
-  MODIFY `sid` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `sid` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
