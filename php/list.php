@@ -36,9 +36,6 @@ for ($i = 0; $i < $res->num_rows; $i++) {
     $arr[$i] = $res->fetch_assoc();
 }
 
-//输出一个对象的接口，接口里面包含总的页数和接口数据
-//$arr:当前的接口数据。
-//$pagenum:总的页数。
 
 class listdata{
 

@@ -1,7 +1,22 @@
 define(['jlazyload'], () => {
     return {
         init: function() {
-            console.log(1);
+            if (localStorage.getItem('loginname')) {
+                console.log(12);
+                $('.logined-h').addClass('lshow');
+                $('.logined-show').removeClass('lshow')
+                    // $('.logined-show').show();
+                    // $('.login-show').hide();
+                    // $('.admin span').html(localStorage.getItem('loginname'));
+            }
+            //退出登录 - 删除本地存储
+            $('.logined-h a').on('click', function() {
+                $('.logined-show').addClass('lshow');
+                $('.logined-h').removeClass('lshow')
+                    // $('.logined-show').hide();
+                    // $('.login-show').show();
+                localStorage.removeItem('loginname');
+            });
             //轮播图
             function lunbo() {
                 const $lunbo = $('.banner-list');
@@ -122,13 +137,15 @@ define(['jlazyload'], () => {
 
 
             var $topnav = $('.v-6').parent();
+            let $viptop = $('.vip-top');
 
             function scroll() {
                 var $scrolltop = $(window).scrollTop(); //获取滚动条的top值
                 if ($scrolltop >= 300) {
+                    $viptop.show();
                     $topnav.show();
                 } else {
-                    console.log(1);
+                    $viptop.hide();
                     $topnav.hide();
                 }
             }
@@ -142,6 +159,28 @@ define(['jlazyload'], () => {
                     scrollTop: 0
                 });
             });
+
+
+
+            function tclock() {
+                let day1 = new Date();
+                let day2 = new Date(2020, 11, 22, 18, 0, 0);
+                let $day = (day2 - day1) / 1000;
+                console.log($day);
+                let day = Math.floor($day / (60 * 60 * 24));
+                let hour = Math.floor($day / (60 * 60)) - (day * 24);
+                let minute = Math.floor($day / 60) - (day * 24 * 60) - (hour * 60);
+                let second = Math.floor($day) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+                let $clockhtml = ''
+                $clockhtml += `<span></span>剩余${day}天${hour}时${minute }分${second}秒`;
+                $('.clock').html($clockhtml);
+            }
+            $timer4 = setInterval(function() {
+                tclock();
+            }, 1000)
+
+
+
         }
     }
 })

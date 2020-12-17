@@ -21,6 +21,7 @@ define(['jcookie'], () => {
                         if (sid === value.sid) { //通过sid的对比找到对应的数据。
                             let $clonebox = $('.list-body2 .list-body:hidden').clone(true, true); //克隆
                             $clonebox.find('.p-img img').attr('src', value.url);
+                            $clonebox.find('.p-img img').attr('sid', value.sid);
                             $clonebox.find('.p-title a').html(value.title);
                             $clonebox.find('.p-price').html(value.price);
                             $clonebox.find('.p-num input').val(num);
@@ -31,22 +32,29 @@ define(['jcookie'], () => {
                     })
                 })
             }
-
-            function sit() {
-                const one = 1
-                $('.p-num input').val(one)
-            }
+            $('.list-body:hidden').attr('checkbox', 'checkbox')
+                // function sit() {
+                //     const one = 1
+                //     $('.p-num input').val(one)
+                // }
             $('.list-body2').on('focusout', '.p-num input', function() {
                 let $val = parseInt($(this).val());
                 if ($val >= 1) {
-
-                    let $pic = $(this).parent().parent().parent().find('.p-price').html();
-                    let $psum = $(this).parent().parent().parent().find('.p-sum');
-                    $psum.html($pic * $val);
-                    Totalprice();
+                    if ($val <= 100) {
+                        $(this).val($val)
+                    } else {
+                        $val = 100;
+                        $(this).val($val)
+                    }
                 } else {
-                    sit();
+                    $val = 1;
+                    $(this).val($val)
                 }
+                let $pic = $(this).parent().parent().parent().find('.p-price').html();
+                let $psum = $(this).parent().parent().parent().find('.p-sum');
+                $psum.html(($pic * $val).toFixed(2));
+                Totalprice();
+                addcookie($(this));
             })
             const $jian = $('.p-num span').eq(0);
 
@@ -57,19 +65,23 @@ define(['jcookie'], () => {
                     $(this).parent().find('input').val($val)
                     let $pic = $(this).parent().parent().parent().find('.p-price').html()
                     let $psum = $(this).parent().parent().find('~ .p-sum')
-                    $psum.html($pic * $val);
+                    $psum.html(($pic * $val).toFixed(2));
                     Totalprice();
+                    addcookie($(this));
                 }
             })
             const $jia = $('.p-num span').eq(1);
             $jia.on('click', function() {
                 let $val = parseInt($(this).parent().find('input').val());
-                $val = $val + 1;
-                $(this).parent().find('input').val($val)
-                let $pic = $(this).parent().parent().parent().find('.p-price').html();
-                let $psum = $(this).parent().parent().parent().find('.p-sum');
-                $psum.html($pic * $val);
-                Totalprice();
+                if ($val <= 99) {
+                    $val = $val + 1;
+                    $(this).parent().find('input').val($val)
+                    let $pic = $(this).parent().parent().parent().find('.p-price').html();
+                    let $psum = $(this).parent().parent().parent().find('.p-sum');
+                    $psum.html(($pic * $val).toFixed(2));
+                    Totalprice();
+                    addcookie($(this));
+                }
             })
 
             $('.list-body2').on('click', '.cek', function() {
@@ -110,11 +122,51 @@ define(['jcookie'], () => {
                     $('.settle p').html(`<span>合计：</span>${oprice.toFixed(2)}<span>元</span><a href="javascript:;">去结算</a>`);
                 });
             }
-
-
+            //删除元素 
             $('.list-body2').on('click', '.p-del', function() {
                 $(this).parent().remove();
+                cookietoarray(); //cookie转换成数组
+                delcookie($(this).parent().find('img').attr('sid'), $arrsid);
+                Totalprice();
             });
+
+            //将改变后的值存放cookie中 - 获取商品的sid,通过sid找到商品的数量。
+            let $arrsid = [];
+            let $arrnum = [];
+
+            function cookietoarray() { //cookie转换成数组
+                if ($.cookie('cookiesid') && $.cookie('cookienum')) {
+                    $arrsid = $.cookie('cookiesid').split(','); //[4,5,6] 
+                    $arrnum = $.cookie('cookienum').split(','); //[10,50,60] 
+                }
+            }
+
+            function addcookie(obj) {
+                cookietoarray() //cookie转换成数组
+                let $sid = obj.parent().parent().parent().find('.p-img').find('img').attr('sid'); //获取sid
+                $arrnum[$.inArray($sid, $arrsid)] = obj.parent().find('input').val(); //赋值
+                $.cookie('cookienum', $arrnum, { expires: 10, path: '/' });
+
+            }
+
+            //删除商品对应的sid和num
+            function delcookie(sid, $arrsid) { //sid:删除商品的sid   arrsid:数组，cookie里面的值
+                let $sidindex = -1; //假设接收索引的值
+                $.each($arrsid, function(index, value) {
+                    if (sid === value) {
+                        $sidindex = index; //接收删除项的索引值
+                    }
+                });
+
+                //删除
+                $arrsid.splice($sidindex, 1);
+                $arrnum.splice($sidindex, 1);
+
+                //重新设置cookie
+                $.cookie('cookiesid', $arrsid, { expires: 10, path: '/' });
+                $.cookie('cookienum', $arrnum, { expires: 10, path: '/' });
+            }
+
 
         }
     }

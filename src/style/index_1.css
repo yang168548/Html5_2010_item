@@ -158,9 +158,17 @@ nav {
   position: relative; }
   .login-show .logined-show {
     position: absolute;
-    top: 20;
+    top: 0;
     right: 20px;
     display: none; }
+  .login-show .logined-h {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: none; }
+  .login-show .lshow {
+    z-index: 2;
+    display: block; }
 
 .other-show {
   position: relative; }
@@ -686,7 +694,9 @@ body {
   text-align: center;
   line-height: 50px;
   background: #fff;
-  z-index: 88; }
+  z-index: 88;
+  border-bottom: 1px solid #f5f5f5;
+  box-shadow: 0 0 5px #999; }
   .vip-top a {
     color: #000;
     margin: 0 10px; }
@@ -698,6 +708,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 100;
   background: #333; }
   .vip-right ul {
     margin-top: 100px;
@@ -733,5 +744,8 @@ body {
       .vip-right ul .v2 .v-2 {
         height: 78px;
         background-position-y: -24px; }
+  .vip-right .vip-right-but {
+    position: absolute;
+    bottom: 10px; }
 
 /*# sourceMappingURL=index_1.css.map */

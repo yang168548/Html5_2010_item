@@ -404,6 +404,8 @@
         line-height: 50px;
         @include bgc();
         z-index: 88;
+        border-bottom: 1px solid #f5f5f5;
+        box-shadow: 0 0 5px #999;
         a {
             color: #000;
             margin: 0 10px;
@@ -418,6 +420,7 @@
         position: fixed;
         top: 0;
         right: 0;
+        z-index: 100;
         @include bgc(#333);
         ul {
             margin-top: 100px;
@@ -454,5 +457,9 @@
                     background-position-y: $bv+2px;
                 }
             }
+        }
+        .vip-right-but {
+            @include posa();
+            bottom: 10px;
         }
     }
