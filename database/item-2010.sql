@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： localhost
--- 生成日期： 2020-12-16 22:42:05
+-- 生成日期： 2020-12-17 21:12:56
 -- 服务器版本： 5.7.26
 -- PHP 版本： 7.3.4
 
@@ -42,6 +42,7 @@ CREATE TABLE `juan` (
 
 INSERT INTO `juan` (`sid`, `url`, `title`, `price`, `urls`) VALUES
 (1, 'https://goods6.juancdn.com/goods/201130/a/a/5fc4e6356c34d275ae7eed0f_800x800.jpg', '秋冬加绒加厚长袖外套', 48.8, 'https://goods6.juancdn.com/goods/201130/a/a/5fc4e6356c34d275ae7eed0f_800x800.jpg,https://goods5.juancdn.com/goods/201130/8/3/5fc4e6b40a214d4c0e0dd639_800x800.jpg,https://goods7.juancdn.com/goods/201130/d/6/5fc4e643b776aa693f23b939_800x800.jpg,https://goods4.juancdn.com/goods/201130/7/d/5fc4e62a597f1d7ded472238_800x800.jpg,https://goods6.juancdn.com/goods/201130/a/a/5fc4e6356c34d275ae7eed0f_800x800.jpg,https://goods5.juancdn.com/goods/201130/9/7/5fc4e6b115ba48490b0dbd1e_800x800.jpg'),
+(41, 'https://goods1.juancdn.com/goods/201005/0/6/5f7a8e05b6f8ea2ecc187cd9_800x800.jpg', '金丝绒黑色连衣裙女春长袖显瘦长裙法式方肩裙赫本风内搭小黑', 78, 'https://goods1.juancdn.com/goods/201005/0/6/5f7a8e05b6f8ea2ecc187cd9_800x800.jpg,https://goods2.juancdn.com/goods/201005/2/5/5f7a8e0633b08932225c0e74_800x800.jpg,https://goods1.juancdn.com/goods/201005/0/6/5f7a8e05b6f8ea2ecc187cd9_800x800.jpg,https://goods2.juancdn.com/goods/201005/2/7/5f7a8e0833b089321d7d2f6a_800x800.jpg,https://goods2.juancdn.com/goods/201005/2/e/5f7a8e03b6f8ea2e602d0eea_800x800.jpg,https://goods7.juancdn.com/goods/201005/d/6/5f7a8e01b6f8ea2ecd059857_800x800.jpg'),
 (2, 'https://goods5.juancdn.com/goods/201016/8/6/5f88ff7b33b089548e5f08f7_800x800.jpg', '2020秋季新款哈伦裤宽松大码修身高腰直筒小脚休闲长裤Y', 87, 'https://goods5.juancdn.com/goods/201016/8/6/5f88ff7b33b089548e5f08f7_800x800.jpg,https://goods2.juancdn.com/goods/201115/2/e/5fb0da8733b0897180722a29_800x800.jpg,https://goods2.juancdn.com/goods/201016/3/5/5f88ffba33b08953621ea7a3_800x800.jpg,https://goods1.juancdn.com/goods/201016/0/d/5f88ffb7b6f8ea4976319491_800x800.jpg,https://goods4.juancdn.com/goods/201016/6/c/5f88ffb533b089535447cac3_800x800.jpg,https://goods2.juancdn.com/goods/201016/2/e/5f88fe30b6f8ea495959608c_800x800.jpg'),
 (3, 'https://b1.beicdn.com/upload/item/2007/17/76551027630000_800x800.jpg', '实拍冬季新款女装千鸟格毛呢外套中长款过膝格子羊毛呢子大衣秋冬', 185, 'https://b1.beicdn.com/upload/item/2007/17/76551027630000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76553376540000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76555605660000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76557690460000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76560775270000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/17/76563407130000_800x800.jpg'),
 (4, 'https://goods2.juancdn.com/goods/201102/3/3/5f9fbfea33b0894f1c25db7c_800x800.jpg', '秋冬德绒加厚打底衫2020韩版自带发热半高领长袖衫YB7', 59, 'https://goods2.juancdn.com/goods/201102/3/3/5f9fbfea33b0894f1c25db7c_800x800.jpg,https://goods2.juancdn.com/goods/201102/2/8/5f9fbfe833b0894f10679dfd_800x800.jpg,https://goods1.juancdn.com/goods/201102/0/7/5f9fbfe633b0894f0705f853_800x800.jpg,https://goods4.juancdn.com/goods/201102/7/4/5f9fbfe433b0894f0247f263_800x800.jpg,https://goods2.juancdn.com/goods/201102/2/4/5f9fc0c1b6f8ea6f81177fbc_800x800.jpg,https://goods4.juancdn.com/goods/201102/7/0/5f9fc0be33b089765d610aeb_800x800.jpg'),
@@ -80,7 +81,11 @@ INSERT INTO `juan` (`sid`, `url`, `title`, `price`, `urls`) VALUES
 (37, 'https://b1.beicdn.com/upload/item/2003/28/99795866790000_790x790.jpg', '忆苒2019春秋新款长袖女港味chic斜领上衣修身一字领长袖T恤女打底衫', 59, 'https://b1.beicdn.com/upload/item/2003/28/99795866790000_790x790.jpg,https://b1.beicdn.com/upload/item/2003/28/99798448270000_718x718.jpg,https://b1.beicdn.com/upload/item/2003/28/99807503690000_790x790.jpg,https://b1.beicdn.com/upload/item/2003/28/99810584550000_790x790.jpg,https://b1.beicdn.com/upload/item/2003/28/99813600910000_713x713.jpg'),
 (38, 'https://b1.beicdn.com/upload/item/2006/20/83544367730000_800x800.jpg', '冰爽丝背心女宽松薄款上衣2020年新款夏季坎肩网红百搭外穿无袖t恤', 39, 'https://b1.beicdn.com/upload/item/2006/20/83544367730000_800x800.jpg,https://b1.beicdn.com/upload/item/2006/20/83547363660000_800x800.jpg,https://b1.beicdn.com/upload/item/2006/20/83549927300000_800x800.jpg,https://b1.beicdn.com/upload/item/2006/20/83552267370000_800x800.jpg,https://b1.beicdn.com/upload/item/2006/20/83555130050000_800x800.jpg,https://b1.beicdn.com/upload/item/2006/20/83590312850000_800x800.jpg'),
 (39, 'https://b1.beicdn.com/upload/item/2007/02/66502049180000_800x800.jpg', '短袖t恤女中年妈妈夏装2020年新款女士t桖半袖薄款上衣冰爽丝针织', 49, 'https://b1.beicdn.com/upload/item/2007/02/66502049180000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/02/66504687510000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/02/66507481600000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/02/66510148650000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/02/66512439370000_800x800.jpg,https://b1.beicdn.com/upload/item/2007/02/76282202620000_800x800.jpg'),
-(40, 'https://b1.beicdn.com/upload/item/2008/04/18948651140000_800x800.jpg', '顾姿女装春秋季连衣裙ZQ1957', 209, 'https://b1.beicdn.com/upload/item/2008/04/18948651140000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18948666810000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18951426230000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18960455800000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18963198340000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18966339230000_800x800.jpg');
+(40, 'https://b1.beicdn.com/upload/item/2008/04/18948651140000_800x800.jpg', '顾姿女装春秋季连衣裙ZQ1957', 209, 'https://b1.beicdn.com/upload/item/2008/04/18948651140000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18948666810000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18951426230000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18960455800000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18963198340000_800x800.jpg,https://b1.beicdn.com/upload/item/2008/04/18966339230000_800x800.jpg'),
+(42, 'https://goods2.juancdn.com/goods/201005/2/2/5f7a65d133b089327145f6ca_800x800.jpg', '2020冬季韩版长袖赫本小黑裙打底连衣裙秋冬款冬裙加厚a', 59.9, 'https://goods2.juancdn.com/goods/201005/2/2/5f7a65d133b089327145f6ca_800x800.jpg,https://goods7.juancdn.com/goods/201005/d/a/5f7a65d4b6f8ea2fdf00cdf7_800x800.jpg,https://goods8.juancdn.com/goods/201005/f/2/5f7a65d2b6f8ea2fd420cb98_800x800.jpg,https://goods3.juancdn.com/goods/201005/4/6/5f7a65d033b08932741d1536_800x800.jpg,https://goods7.juancdn.com/goods/201005/c/b/5f7a65ceb6f8ea2fe11bcfe7_800x800.jpg,https://goods7.juancdn.com/goods/201005/d/6/5f7a662033b08932737b0879_800x800.jpg'),
+(43, 'https://goods2.juancdn.com/goods/200929/3/7/5f7349fab6f8ea2f8365b020_800x800.jpg', '御姐范气质炸街针织衫马甲两件套女早秋中长款雪纺碎花连衣裙', 59, 'https://goods2.juancdn.com/goods/200929/3/7/5f7349fab6f8ea2f8365b020_800x800.jpg,https://goods1.juancdn.com/goods/200929/1/1/5f734a02b6f8ea2f8e5e851e_800x800.jpg,https://goods1.juancdn.com/goods/200929/1/7/5f7349fbb6f8ea2f98796fbe_800x800.jpg,https://goods8.juancdn.com/goods/200929/e/b/5f7349f8b6f8ea2f8d4fd9e0_800x800.jpg,https://goods8.juancdn.com/goods/200929/f/6/5f734a04b6f8ea2f947ef75e_800x800.jpg,https://goods2.juancdn.com/goods/200929/3/7/5f7349fab6f8ea2f8365b020_800x800.jpg'),
+(44, 'https://goods3.juancdn.com/goods/200914/4/d/5f5f60f8b6f8ea42a34c0ba7_800x800.jpg', '蕾丝披肩针织上衣套装2020年新款女显瘦高腰A字半身裙洋', 59, 'https://goods3.juancdn.com/goods/200914/4/d/5f5f60f8b6f8ea42a34c0ba7_800x800.jpg,https://goods6.juancdn.com/goods/200914/b/c/5f5f60ffb6f8ea68e97ed70d_800x800.jpg,https://goods6.juancdn.com/goods/200914/b/0/5f5f60fdb6f8ea43be316219_800x800.jpg,https://goods5.juancdn.com/goods/200914/8/b/5f5f60fcb6f8ea68ee379dcc_800x800.jpg,https://goods6.juancdn.com/goods/200914/a/6/5f5f60fb33b0896bea1f66cb_800x800.jpg,https://goods8.juancdn.com/goods/200914/f/b/5f5f60f933b0897c0f0de949_800x800.jpg'),
+(45, 'https://goods4.juancdn.com/goods/201004/7/c/5f79ed8033b089361c389665_800x800.jpg', '彩虹条纹毛衣女宽松套头复古港味2020年新款慵懒风洋气针', 65, 'https://goods4.juancdn.com/goods/201004/7/c/5f79ed8033b089361c389665_800x800.jpg,https://goods7.juancdn.com/goods/201004/d/8/5f79ed8733b089362d020880_800x800.jpg,https://goods2.juancdn.com/goods/201004/3/e/5f79ed89b6f8ea36da608d53_800x800.jpg,https://goods1.juancdn.com/goods/201004/0/a/5f79ed8333b08936154e8073_800x800.jpg,https://goods3.juancdn.com/goods/201004/5/a/5f79ed82b6f8ea36446cd513_800x800.jpg,https://goods3.juancdn.com/goods/201004/4/0/5f79ed8533b08936340c682f_800x800.jpg');
 
 -- --------------------------------------------------------
 
@@ -100,21 +105,10 @@ CREATE TABLE `reg` (
 --
 
 INSERT INTO `reg` (`id`, `phone`, `password`, `date`) VALUES
-(100001, 1329888888, '123456', '2020-12-16 21:32:24');
-
--- --------------------------------------------------------
-
---
--- 表的结构 `registry`
---
-
-CREATE TABLE `registry` (
-  `sid` tinyint(3) UNSIGNED NOT NULL,
-  `username` varchar(20) DEFAULT NULL,
-  `password` varchar(40) DEFAULT NULL,
-  `email` varchar(99) DEFAULT NULL,
-  `date` datetime DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+(100001, 1329888888, '123456', '2020-12-16 21:32:24'),
+(100002, 13298880011, '7c4a8d09ca3762af61e59520943dc26494f8941b', '2020-12-17 10:56:36'),
+(100003, 13233333333, '7c4a8d09ca3762af61e59520943dc26494f8941b', '2020-12-17 11:39:31'),
+(100004, 13111111111, '7c4a8d09ca3762af61e59520943dc26494f8941b', '2020-12-17 15:03:42');
 
 --
 -- 转储表的索引
@@ -133,12 +127,6 @@ ALTER TABLE `reg`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `registry`
---
-ALTER TABLE `registry`
-  ADD PRIMARY KEY (`sid`);
-
---
 -- 在导出的表使用AUTO_INCREMENT
 --
 
@@ -146,19 +134,13 @@ ALTER TABLE `registry`
 -- 使用表AUTO_INCREMENT `juan`
 --
 ALTER TABLE `juan`
-  MODIFY `sid` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `sid` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- 使用表AUTO_INCREMENT `reg`
 --
 ALTER TABLE `reg`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100002;
-
---
--- 使用表AUTO_INCREMENT `registry`
---
-ALTER TABLE `registry`
-  MODIFY `sid` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100005;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
