@@ -18,7 +18,7 @@ define(['jcookie'], () => {
                         alert('用户名或者密码有误!');
                         $password.val(''); //密码清空
                     } else { //登录成功
-                        location.href = 'index_1.html';
+                        location.href = 'index.html';
                         localStorage.setItem('loginname', $username.val());
                     }
                 })
